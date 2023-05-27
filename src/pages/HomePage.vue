@@ -3,7 +3,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import Accueil1 from 'src/components/Accueil1.vue';
+import Accueil1 from 'src/components/Accueil/Accueil1.vue';
 
 export default defineComponent({
   name: 'HomePage',
