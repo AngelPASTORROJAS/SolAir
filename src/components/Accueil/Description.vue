@@ -22,20 +22,20 @@ export default defineComponent({
 <style lang="scss" scoped>
 h2 {
   text-transform: capitalize;
-  font-family: $font-titre2;
-  font-size: $taille-titre2;
+  font-family: $font-family-titre2;
+  font-size: $font-size-titre2;
   color: $titre;
 }
 
 p {
-  font-family: $font-paragraphe;
+  font-family: $font-family-paragraphe;
 }
 
 button {
   background-color: white;
   color: $cta;
-  font-family: $font-paragraphe;
-  font-size: $taille-paragraphe;
+  font-family: $font-family-paragraphe;
+  font-size: $font-size-paragraphe;
   border: 2px solid $cta;
   border-color: $cta;
   border-radius: 10px;
