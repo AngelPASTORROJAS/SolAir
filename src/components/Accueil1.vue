@@ -41,7 +41,7 @@ export default defineComponent({
 .button-1 {
   font-family: 'Inter';
   font-size: 16px;
-  background: #fa6f6f;
+  background: $cta;
   color: white;
   border: 0px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
