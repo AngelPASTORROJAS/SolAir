@@ -25,8 +25,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .accueil-div {
-  background: url('./../../assets/img/header.png') center / cover no-repeat,
-    url('./../../assets/img/fumée.png') center bottom / cover no-repeat;
+  background: url('./../../assets/img/accueil.jpg') center / cover no-repeat,
+    url('./../../assets/img/fumee.jpg') center bottom / cover no-repeat;
   background-blend-mode: screen;
   // width: 100%;
 }
