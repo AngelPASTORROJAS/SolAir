@@ -1,5 +1,5 @@
 <template>
-  <nav class="q-py-md q-px-xl navigation">
+  <nav class="q-ml-none q-py-md q-px-xl navigation">
     <ul class="row justify-between navigateur-list">
       <li>
         <a href="#">
@@ -7,13 +7,13 @@
         </a>
       </li>
       <li>
-        <a class="text-white" href="#">Gestionnaire d'experience</a>
+        <a class="gt-sm text-white" href="#">Gestionnaire d'experience</a>
       </li>
       <li>
-        <a class="text-white" href="#">Qui sommes-nous ?</a>
+        <a class="gt-sm text-white" href="#">Qui sommes-nous ?</a>
       </li>
       <li>
-        <a class="text-white" href="#">Contact</a>
+        <a class="gt-sm text-white" href="#">Contact</a>
       </li>
       <li>
         <a href="">
@@ -23,27 +23,15 @@
     </ul>
   </nav>
 </template>
+
 <script lang="ts">
-import { useQuasar } from 'quasar';
-import { defineComponent, onMounted } from 'vue';
+import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'NavBarComponent',
-  setup() {
-    const $q = useQuasar();
-    onMounted(async () => {
-      try {
-        $q.loading.show();
-      } catch (e) {
-        console.log(e);
-      } finally {
-        $q.loading.hide();
-      }
-    });
-    return {};
-  },
   components: {},
 });
 </script>
+
 <style lang="scss" scoped>
 .navigation {
   position: sticky;
@@ -65,7 +53,7 @@ nav a {
 }
 nav a:hover {
   text-decoration: underline;
-  text-decoration-color: #388ea9;
+  text-decoration-color: $titre;
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
 }
