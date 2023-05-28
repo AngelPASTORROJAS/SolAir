@@ -1,7 +1,7 @@
 <template>
   <div class="information">
     <h2>Comment ça marche ?</h2>
-    <article class="row justify-center articles">
+    <article class="row justify-center articles items-start">
       <article class="col-3 column questions">
         <img
           class="col"
