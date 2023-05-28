@@ -1,6 +1,6 @@
 <template>
   <nav class="q-ml-none q-py-md q-px-xl navigation">
-    <ul class="row justify-between navigateur-list">
+    <ul class="row items-center justify-between navigateur-list">
       <li>
         <a href="#">
           <img src="./../assets/img/logo.svg" alt="logo du site" />
