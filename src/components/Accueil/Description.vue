@@ -1,17 +1,17 @@
 <template>
   <div class="row justify-center items-start q-py-md q-px-xl">
     <div class="column justify-evenly description">
-      <h2>Avec Sol’Air, trouvez des voyages qui vous ressemblent.</h2>
-      <p>
+      <h2 class="text-center">Avec Sol’Air, trouvez des voyages qui vous ressemblent.</h2>
+      <p class="text-center">
         Sol’Air est une agence de voyage qui trouve pour vous la destination qui
         vous correspond, en France. Le concept ? Vous répondez à une série de 10
         questions, et vous n’avez plus qu’à faire vos valises et partir !
       </p>
-      <p>
+      <p class="text-center">
         En bonus : retrouvez une sélection de logements, de moyens de transport et
         d’activité, ainsi que d’autres destinations similaires.
       </p>
-      <a href="#/qui-sommes-nous">
+      <a class="text-center" href="#/qui-sommes-nous">
         <button>En savoir plus</button>
       </a>
     </div>
