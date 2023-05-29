@@ -9,7 +9,9 @@
     En bonus : retrouvez une sélection de logements, de moyens de transport et
     d’activité, ainsi que d’autres destinations similaires.
   </p>
-  <button>En savoir plus</button>
+  <a href="#/qui-sommes-nous">
+    <button>En savoir plus</button>
+  </a>
 </template>
 
 <script lang="ts">
