@@ -1,17 +1,22 @@
 <template>
-  <h2>Avec Sol’Air, trouvez des voyages qui vous ressemblent.</h2>
-  <p>
-    Sol’Air est une agence de voyage qui trouve pour vous la destination qui
-    vous correspond, en France. Le concept ? Vous répondez à une série de 10
-    questions, et vous n’avez plus qu’à faire vos valises et partir !
-  </p>
-  <p>
-    En bonus : retrouvez une sélection de logements, de moyens de transport et
-    d’activité, ainsi que d’autres destinations similaires.
-  </p>
-  <a href="#/qui-sommes-nous">
-    <button>En savoir plus</button>
-  </a>
+  <div class="row justify-center q-py-md q-px-xl">
+    <div class="column justify-evenly description">
+      <h2>Avec Sol’Air, trouvez des voyages qui vous ressemblent.</h2>
+      <p>
+        Sol’Air est une agence de voyage qui trouve pour vous la destination qui
+        vous correspond, en France. Le concept ? Vous répondez à une série de 10
+        questions, et vous n’avez plus qu’à faire vos valises et partir !
+      </p>
+      <p>
+        En bonus : retrouvez une sélection de logements, de moyens de transport et
+        d’activité, ainsi que d’autres destinations similaires.
+      </p>
+      <a href="#/qui-sommes-nous">
+        <button>En savoir plus</button>
+      </a>
+    </div>
+    <img class="q-ma-xl" src="./../../assets/img/ciel.png" alt="">
+  </div>
 </template>
 
 <script lang="ts">
@@ -48,5 +53,13 @@ button:hover {
   color: white;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+}
+
+img {
+  width: 40em;
+}
+
+.description {
+  width: 30em;
 }
 </style>
