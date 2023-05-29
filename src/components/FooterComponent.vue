@@ -86,7 +86,8 @@ export default defineComponent({
           message: 'Copié dans le presse-papiers.',
           type: 'positive',
           color: 'green',
-          icon:'content_paste'
+          icon:'content_paste',
+          timeout: 3
         });
       });
     }
@@ -98,7 +99,8 @@ export default defineComponent({
           message: 'Copié dans le presse-papiers.',
           type: 'positive',
           color: 'green',
-          icon: 'content_paste'
+          icon: 'content_paste',
+          timeout: 3
         });
       });
     }
