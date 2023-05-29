@@ -4,6 +4,7 @@
   <Information />
   <PointsCle />
   <Newsletter />
+  <FooterComponent />
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
@@ -12,6 +13,7 @@ import Description from 'src/components/Accueil/Description.vue';
 import Information from 'src/components/Accueil/Information.vue';
 import PointsCle from 'src/components/Accueil/PointsCle.vue';
 import Newsletter from 'src/components/Newsletter.vue';
+import FooterComponent from 'src/components/FooterComponent.vue';
 
 export default defineComponent({
   name: 'HomePage',
@@ -20,7 +22,8 @@ export default defineComponent({
     Description,
     Information,
     PointsCle,
-    Newsletter
+    Newsletter,
+    FooterComponent
 },
 });
 </script>
