@@ -36,6 +36,7 @@ h2 {
 
 p {
   font-family: $font-family-p;
+  font-size: $font-size-p;
 }
 
 button {
