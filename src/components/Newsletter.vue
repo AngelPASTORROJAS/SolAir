@@ -6,18 +6,27 @@
       Découvrez tout ce qu’il faut savoir pour passer vos meilleures vacances en
       France.
     </p>
-    <q-form @submit="onSubmit" class="q-gutter-md">
-      <q-input
-        v-model="mailInput"
-        bg-color="white"
-        type="text"
-        label="solair@gmail.com"
-      >
-        <template v-slot:append>
-          <q-btn icon="check" type="submit" color="primary" />
-        </template>
-      </q-input>
-    </q-form>
+    <q-input
+      class="q-pa-lg"
+      v-model="mailInput"
+      type="text"
+      placeholder="solair@gmail.com"
+      standout="text-white bg-red-4"
+      bg-color="white"
+      rounded
+    >
+      <template v-slot:append>
+        <div>
+          <q-btn
+            class="button-custom"
+            @click="onSubmit"
+            round
+            icon="check"
+            type="submit"
+          />
+        </div>
+      </template>
+    </q-input>
   </div>
 </template>
 <script lang="ts">
@@ -29,18 +38,19 @@ export default defineComponent({
   setup() {
     const $q = useQuasar();
     const mailInput = ref(null);
+    const onSubmit = () => {
+      if (mailInput.value) {
+        $q.notify({
+          color: 'red',
+          textColor: 'white',
+          icon: 'warning',
+          message: 'Ecrit ' + mailInput.value,
+        });
+      }
+    };
     return {
+      onSubmit,
       mailInput,
-      onSubmit() {
-        if (!mailInput.value) {
-          $q.notify({
-            color: 'red',
-            textColor: 'white',
-            icon: 'warning',
-            message: 'Ecrit',
-          });
-        }
-      },
     };
   },
   components: {},
@@ -51,6 +61,7 @@ export default defineComponent({
   background: url('./../assets/img/envole-avion.jpg') center / cover no-repeat,
     url('./../assets/img/fumee-reverse.png') center bottom / cover no-repeat;
   background-blend-mode: screen;
+  padding: 20em 2em;
 }
 
 h2 {
@@ -64,5 +75,14 @@ p {
   font-family: $font-family-p;
   color: $paragraphe;
   max-width: 684px;
+}
+
+.button-custom {
+  color: white;
+  background-color: $cta;
+}
+
+.button-custom:hover {
+  background-color: #cc6565;
 }
 </style>
