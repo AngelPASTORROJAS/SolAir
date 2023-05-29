@@ -61,7 +61,7 @@ export default defineComponent({
   background: url('./../assets/img/envole-avion.jpg') center / cover no-repeat,
     url('./../assets/img/fumee-reverse.png') center bottom / cover no-repeat;
   background-blend-mode: screen;
-  padding: 20em 2em;
+  padding: 15em 2em;
 }
 
 h2 {
