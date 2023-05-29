@@ -1,5 +1,5 @@
 <template>
-  <div class="row justify-center q-py-md q-px-xl">
+  <div class="row justify-center items-start q-py-md q-px-xl">
     <div class="column justify-evenly description">
       <h2>Avec Sol’Air, trouvez des voyages qui vous ressemblent.</h2>
       <p>
@@ -56,7 +56,7 @@ button:hover {
 }
 
 img {
-  width: 40em;
+  width: 35em;
 }
 
 .description {
