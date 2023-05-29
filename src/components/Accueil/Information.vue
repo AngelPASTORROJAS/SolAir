@@ -41,6 +41,7 @@ h2 {
   font-family: $font-family-h2;
   font-size: $font-size-h2;
   color: white;
+  padding-bottom: 1em;
 }
 
 p {
@@ -62,6 +63,7 @@ article {
   background: url('./../../assets/img/information.jpg') center / cover no-repeat,
     url('./../../assets/img/fumee.png') center bottom / cover no-repeat;
   background-blend-mode: screen;
+  padding-bottom: 15em;
 }
 
 img {
