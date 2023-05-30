@@ -2,7 +2,7 @@
   <nav class="q-py-md q-px-xl navigation">
     <ul class="row items-center justify-between navigateur-list">
       <li class=" q-pt-sm q-pl-md">
-        <a  href="#">
+        <a class="text-nav" href="#">
           <img src="./../assets/img/logo.svg" alt="logo du site" />
         </a>
       </li>
