@@ -1,24 +1,22 @@
 <template>
   <nav class="q-py-md q-px-xl navigation">
     <ul class="row items-center justify-between navigateur-list">
-      <li class="q-pl-md">
+      <li class=" q-pt-sm q-pl-md">
         <a  href="#">
           <img src="./../assets/img/logo.svg" alt="logo du site" />
         </a>
       </li>
       <li>
-        <a class="gt-sm text-white text-nav" href="#">Gestionnaire d'experience</a>
+        <a class="gt-sm text-white text-nav" href="#/recherche">Gestionnaire d'experience</a>
       </li>
       <li>
-        <a class="gt-sm text-white text-nav" href="#">Qui sommes-nous ?</a>
+        <a class="gt-sm text-white text-nav" href="#/qui-sommes-nous">Qui sommes-nous ?</a>
       </li>
       <li>
-        <a class="gt-sm text-white text-nav" href="#">Contact</a>
+        <a class="gt-sm text-white text-nav" href="#/contact">Contact</a>
       </li>
       <li>
-        <a href="#/login">
-          <img src="./../assets/img/login.png" alt="icône de login" />
-        </a>
+        <q-btn class=" button-custom" to="/login" size="30px" flat round icon="perm_identity" />
       </li>
     </ul>
   </nav>
@@ -57,5 +55,13 @@ export default defineComponent({
   text-decoration-color: $titre;
   text-decoration-thickness: 2px;
   text-decoration-style: solid;
+}
+
+.button-custom {
+  color: white;
+}
+
+.button-custom:hover {
+  color: $titre;
 }
 </style>
