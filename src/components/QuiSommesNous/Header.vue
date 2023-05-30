@@ -20,10 +20,9 @@
   
   <style lang="scss" scoped>
   .accueil-div {
-    background: url('./../../assets/img/accueil.jpg') center / cover no-repeat,
-      url('./../../assets/img/fumee.png') center bottom / cover no-repeat;
+    background: url('./../../assets/img/header.jpg') center / cover no-repeat,
+      url('./../../assets/img/fumee.png') center / cover no-repeat;
     background-blend-mode: screen;
-    // width: 100%;
     padding-bottom: 25vh;
   }
   
