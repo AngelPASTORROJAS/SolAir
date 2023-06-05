@@ -2,16 +2,20 @@
   <div class="row container items-center">
     <div class="row justify-center logo-partenaires">
       <img
-        src="https://www.mydigitalschool.com/themes/custom/mds/img/logo.png"
-        alt="logo de mydigitalschool"
+        src="../../assets/logo-partenaires/Ryanair.svg"
+        alt="logo de ryanair"
       />
       <img
-        src="https://www.mydigitalschool.com/themes/custom/mds/img/logo.png"
-        alt="logo de mydigitalschool"
+        src="./../../assets/logo-partenaires/vanners-Logo.png"
+        alt="logo de vanners"
       />
       <img
-        src="https://www.mydigitalschool.com/themes/custom/mds/img/logo.png"
-        alt="logo de mydigitalschool"
+        src="../../assets/logo-partenaires/Airbnb_Logo.svg"
+        alt="logo de airbnb"
+      />
+      <img
+        src="../../assets/logo-partenaires/Sixt_Logo_2023.svg"
+        alt="logo de sixt"
       />
     </div>
     <div class="col column justify-evenly description">
@@ -88,7 +92,6 @@ button:hover {
 
 img {
     padding: 1em;
-    width: max-content;
-    height: max-content;
-}
+    width: 30vh;
+    height: auto}
 </style>
