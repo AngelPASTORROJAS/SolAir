@@ -4,6 +4,7 @@
   <PointsCle />
   <Ruban />
   <Partenaires />
+  <FAQ />
   <Newsletter />
   <FooterComponent />
 </template>
@@ -14,6 +15,7 @@ import Description from 'src/components/QuiSommesNous/Description.vue';
 import PointsCle from 'src/components/Accueil/PointsCle.vue';
 import Ruban from 'src/components/QuiSommesNous/Ruban.vue';
 import Partenaires from 'src/components/QuiSommesNous/Partenaires.vue' ;
+import FAQ from 'src/components/QuiSommesNous/FAQ.vue';
 import Newsletter from 'src/components/Newsletter.vue';
 import FooterComponent from 'src/components/FooterComponent.vue';
 
@@ -23,8 +25,9 @@ export default defineComponent({
     HeaderPage,
     Description,
     PointsCle,
-    Partenaires,
     Ruban,
+    Partenaires,
+    FAQ,
     Newsletter,
     FooterComponent,
   },
