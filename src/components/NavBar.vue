@@ -1,5 +1,5 @@
 <template>
-  <nav class="q-py-md q-px-xl navigation">
+  <nav class="q-py-md q-px-xl navigation text-custom-p">
     <ul class="row items-center justify-between navigateur-list">
       <li class=" q-pt-sm q-pl-md">
         <a class="text-nav" href="#">
@@ -44,9 +44,8 @@ export default defineComponent({
 }
 
 .text-nav {
-  font-family: 'Inter';
   font-weight: 700;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 22px;
   text-decoration: none;
 }
