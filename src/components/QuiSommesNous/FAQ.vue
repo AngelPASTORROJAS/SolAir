@@ -7,8 +7,8 @@
         <q-list bordered class="rounded-borders">
           <q-expansion-item
           v-model="expanded1"
-          class="text-custom-p"
-          :header-class="expanded1?'bg-red-5 text-white':''"
+          :header-style="{fontWeight: '700'}"
+          :header-class="expanded1?'bg-red-5 text-white text-custom-p':'text-custom-p'"
             switch-toggle-side
             expand-separator
             label="Comment puis-je accéder mes anciennes recherches faites sur votre site ?"
@@ -25,9 +25,9 @@
         <br>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
-          class="text-custom-p"
           v-model="expanded2"
-          :header-class="expanded2?'bg-red-5 text-white':''"
+          :header-style="{fontWeight: '700'}"
+          :header-class="expanded2?'bg-red-5 text-white text-custom-p':'text-custom-p'"
             switch-toggle-side
             expand-separator
             label="Puis-je réserver la destination que je souhaite depuis votre site ?"
@@ -44,9 +44,9 @@
         <br>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
-          class="text-custom-p"
           v-model="expanded3"
-          :header-class="expanded3?'bg-red-5 text-white':''"
+          :header-style="{fontWeight: '700'}"
+          :header-class="expanded3?'bg-red-5 text-white text-custom-p':'text-custom-p'"
             switch-toggle-side
             expand-separator
             label="Quels types de voyages proposez-vous ?"
@@ -63,28 +63,9 @@
         <br>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
-          class="text-custom-p"
           v-model="expanded4"
-          :header-class="expanded4?'bg-red-5 text-white':''"
-            switch-toggle-side
-            expand-separator
-            label="Pouvez-vous m'aider à organiser des activités spécifiques sur ma destination ?"
-          >
-            <q-card>
-              <q-card-section class="text-custom-p">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupti
-                commodi magni quaerat ex numquam, dolorum officiis modi facere maiores architecto suscipit iste
-                eveniet doloribus ullam aliquid.
-              </q-card-section>
-            </q-card>
-          </q-expansion-item>
-        </q-list>
-        <br>
-        <q-list bordered class="rounded-borders">
-          <q-expansion-item
-          class="text-custom-p"
-          v-model="expanded5"
-          :header-class="expanded5?'bg-red-5 text-white':''"
+          :header-style="{fontWeight: '700'}"
+          :header-class="expanded4?'bg-red-5 text-white text-custom-p':'text-custom-p'"
             switch-toggle-side
             expand-separator
             label="Pouvez-vous m'aider à organiser des activités spécifiques sur ma destination ?"
@@ -110,14 +91,12 @@ export default defineComponent({
             expanded2: ref(false),
             expanded3: ref(false),
             expanded4: ref(false),
-            expanded5: ref(false)
         };
     },
     components: {},
 });
 </script>
 <style lang="scss" scoped>
-
 .qseparator{
     border: none;
   border-top: 1px solid $titre;
