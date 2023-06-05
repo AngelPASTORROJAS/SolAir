@@ -23,10 +23,10 @@
     background: url('./../../assets/img/header.jpg') center / cover no-repeat,
       url('./../../assets/img/fumee.png') center / cover no-repeat;
     background-blend-mode: screen;
-    padding-bottom: 25vh;
   }
   
   .accueil {
+    padding-bottom: 25vh;
     font-family: 'Montserrat';
     text-transform: capitalize;
     margin: 10% 20%;
