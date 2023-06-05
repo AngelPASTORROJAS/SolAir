@@ -1,7 +1,7 @@
 <template>
   <div class="column items-center q-py-md q-px-xl newsletters">
-    <h2 class="text-center">INSCRIVEZ-VOUS À LA NEWSLETTER</h2>
-    <p class="text-center">
+    <h2 class="text-center text-custom-h2">INSCRIVEZ-VOUS À LA NEWSLETTER</h2>
+    <p class="text-center text-custom-p">
       Au programme : top des destinations, bons plans, conseils astuces...
       Découvrez tout ce qu’il faut savoir pour passer vos meilleures vacances en
       France.
@@ -64,16 +64,7 @@ export default defineComponent({
   padding: 15em 2em;
 }
 
-h2 {
-  font-size: $font-size-h2;
-  font-family: $font-family-h2;
-  color: $titre;
-}
-
 p {
-  font-size: $font-size-p;
-  font-family: $font-family-p;
-  color: $paragraphe;
   max-width: 684px;
 }
 

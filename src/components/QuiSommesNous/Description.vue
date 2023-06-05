@@ -1,8 +1,8 @@
 <template>
   <div class="row justify-center items-start q-py-md q-px-xl objectif">
     <div class="column justify-evenly description">
-      <h2 class="text-center">Qu’est ce que SOL’AIR ?</h2>
-      <p class="text-center">
+      <h2 class="text-custom-h2 text-center">Qu’est ce que SOL’AIR ?</h2>
+      <p class="text-custom-p text-center">
         Sol’Air est une agence de voyage qui trouve pour vous la destination qui
         vous correspond, en France. Le concept ? Vous répondez à une série de 10
         questions, et vous n’avez plus qu’à faire vos valises et partir ! En
@@ -15,7 +15,7 @@
             src="./../../assets/icons/question-custom.svg"
             alt="Icon question"
           />
-          <p>
+          <p class="text-custom-p">
             Je répond à 10 questions, dans l’objectif de trouver mes préférences
             : lieu, saison, activités, centres d’intérêt, rythme de vie..
           </p>
@@ -25,7 +25,7 @@
             src="./../../assets/icons/reponse-custom.svg"
             alt="Icon reponse"
           />
-          <p>
+          <p class="text-custom-p">
             Mes réponses sont comparées avec tous les lieux répertoriés en
             France.
           </p>
@@ -35,7 +35,7 @@
             src="./../../assets/icons/destination-custom.svg"
             alt="Icon destination"
           />
-          <p>
+          <p class="text-custom-p">
             La destination qui me correspond à 100% m’est proposée, avec des
             propositions de logements, de moyens de transports et des activités
             d’entreprises partenaires.
@@ -43,7 +43,7 @@
         </article>
       </div>
 
-      <a class="text-center" href="#/recherche">
+      <a class="text-custom-p text-center" href="#/recherche">
         <button>Découvrir</button>
       </a>
     </div>
@@ -58,17 +58,6 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-h2 {
-  font-family: $font-family-h2;
-  font-size: $font-size-h2;
-  color: $titre;
-}
-
-p {
-  font-family: $font-family-p;
-  font-size: $font-size-p;
-}
-
 button {
   margin-top: 3em;
   background-color: white;

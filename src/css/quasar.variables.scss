@@ -38,3 +38,15 @@ $font-family-p: 'Inter';
 $font-size-h1: 62px;
 $font-size-h2: 46px;
 $font-size-p: 16px;
+
+.text-custom-p {
+  font-family: $font-family-p;
+  font-size: $font-size-p;
+  color: $paragraphe;
+}
+
+.text-custom-h2 {
+  font-family: $font-family-h2;
+  font-size: $font-size-h2;
+  color: $titre;
+}

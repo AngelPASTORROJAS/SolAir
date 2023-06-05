@@ -9,7 +9,7 @@
     <div class="row justify-evenly articles">
       <article class="text-center">
         <img height="80px" src="./../../assets/icons/idee.svg" />
-        <p>
+        <p class="text-custom-p">
           Sol’Air, c’est une solution rapide, gratuite et inédite pour trouver
           la destination de vos prochaines vacances en France
         </p>
@@ -20,21 +20,21 @@
           src="./../../assets/icons/destination-blanc.svg"
           alt=""
         />
-        <p>
+        <p class="text-custom-p">
           Pour chacun de vos voyages, vous pourrez découvrir une destination
           différente, selon la saison à laquelle vous partez.
         </p>
       </article>
       <article class="text-center">
         <img height="80px" src="./../../assets/icons/top-chrono.svg" alt="" />
-        <p>
+        <p class="text-custom-p">
           Pour chacun de vos voyages, vous pourrez découvrir une destination
           différente, selon la saison à laquelle vous partez.
         </p>
       </article>
       <article class="text-center">
         <img height="80px" src="./../../assets/icons/checked.svg" alt="" />
-        <p>
+        <p class="text-custom-p">
           Pour chacun de vos voyages, vous pourrez découvrir une destination
           différente, selon la saison à laquelle vous partez.
         </p>
@@ -62,8 +62,6 @@ article {
 }
 
 p {
-  font-size: $font-size-p;
-  font-family: $font-family-p;
   color: white;
 }
 </style>

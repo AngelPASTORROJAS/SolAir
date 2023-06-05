@@ -19,15 +19,15 @@
       />
     </div>
     <div class="col column justify-evenly description">
-      <h2>
+      <h2 class="text-custom-h2">
         Avec Sol’Air, trouvez des voyages qui vous ressemblent.
       </h2>
-      <p>
+      <p class="text-custom-p">
         Sol’Air est une agence de voyage qui trouve pour vous la destination qui
         vous correspond, en France. Le concept ? Vous répondez à une série de 10
         questions, et vous n’avez plus qu’à faire vos valises et partir !
       </p>
-      <p>
+      <p class="text-custom-p">
         En bonus : retrouvez une sélection de logements, de moyens de transport
         et d’activité, ainsi que d’autres destinations similaires.
       </p>
@@ -48,14 +48,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 h2 {
   text-transform: capitalize;
-  font-family: $font-family-h2;
-  font-size: $font-size-h2;
-  color: $titre;
-}
-
-p {
-  font-family: $font-family-p;
-  font-size: $font-size-p;
 }
 
 button {

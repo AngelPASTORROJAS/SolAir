@@ -1,19 +1,20 @@
 <template>
     <div class="container">
         <div class="row items-center">
-            <h2 class="text-center q-pr-lg">QUESTION LES PLUS POSÉES</h2>
+            <h2 class="text-center q-pr-lg text-custom-h2">QUESTION LES PLUS POSÉES</h2>
             <hr class="col qseparator" />
         </div>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
           v-model="expanded1"
+          class="text-custom-p"
           :header-class="expanded1?'bg-red-5 text-white':''"
             switch-toggle-side
             expand-separator
             label="Comment puis-je accéder mes anciennes recherches faites sur votre site ?"
           >
             <q-card>
-              <q-card-section>
+              <q-card-section class="text-custom-p">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupti
                 commodi magni quaerat ex numquam, dolorum officiis modi facere maiores architecto suscipit iste
                 eveniet doloribus ullam aliquid.
@@ -24,6 +25,7 @@
         <br>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
+          class="text-custom-p"
           v-model="expanded2"
           :header-class="expanded2?'bg-red-5 text-white':''"
             switch-toggle-side
@@ -31,7 +33,7 @@
             label="Puis-je réserver la destination que je souhaite depuis votre site ?"
           >
             <q-card>
-              <q-card-section>
+              <q-card-section class="text-custom-p">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupti
                 commodi magni quaerat ex numquam, dolorum officiis modi facere maiores architecto suscipit iste
                 eveniet doloribus ullam aliquid.
@@ -42,6 +44,7 @@
         <br>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
+          class="text-custom-p"
           v-model="expanded3"
           :header-class="expanded3?'bg-red-5 text-white':''"
             switch-toggle-side
@@ -49,7 +52,7 @@
             label="Quels types de voyages proposez-vous ?"
           >
             <q-card>
-              <q-card-section>
+              <q-card-section class="text-custom-p">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupti
                 commodi magni quaerat ex numquam, dolorum officiis modi facere maiores architecto suscipit iste
                 eveniet doloribus ullam aliquid.
@@ -60,6 +63,7 @@
         <br>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
+          class="text-custom-p"
           v-model="expanded4"
           :header-class="expanded4?'bg-red-5 text-white':''"
             switch-toggle-side
@@ -67,7 +71,7 @@
             label="Pouvez-vous m'aider à organiser des activités spécifiques sur ma destination ?"
           >
             <q-card>
-              <q-card-section>
+              <q-card-section class="text-custom-p">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupti
                 commodi magni quaerat ex numquam, dolorum officiis modi facere maiores architecto suscipit iste
                 eveniet doloribus ullam aliquid.
@@ -78,6 +82,7 @@
         <br>
         <q-list bordered class="rounded-borders">
           <q-expansion-item
+          class="text-custom-p"
           v-model="expanded5"
           :header-class="expanded5?'bg-red-5 text-white':''"
             switch-toggle-side
@@ -85,7 +90,7 @@
             label="Pouvez-vous m'aider à organiser des activités spécifiques sur ma destination ?"
           >
             <q-card>
-              <q-card-section>
+              <q-card-section class="text-custom-p">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, eius reprehenderit eos corrupti
                 commodi magni quaerat ex numquam, dolorum officiis modi facere maiores architecto suscipit iste
                 eveniet doloribus ullam aliquid.
@@ -112,11 +117,7 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
-h2 {
-    font-size: $font-size-h2;
-    font-family: $font-family-h2;
-    color: $titre;
-}
+
 .qseparator{
     border: none;
   border-top: 1px solid $titre;

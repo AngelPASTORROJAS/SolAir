@@ -1,10 +1,10 @@
 <template>
   <div class="row justify-center items-start q-py-md q-px-xl objectif">
     <div class="column justify-evenly description">
-      <h2 class="text-center">
+      <h2 class="text-center text-custom-h2">
         L’objectif de Sol’Air ? Trouver la destination de vos rêves !
       </h2>
-      <p class="text-center">
+      <p class="text-center text-custom-p">
         Notre système de comparaison permet de prendre en compte vos critère,
         sans porter d’attention particulière à la notoriété des différents
         endroits et de vous faire découvrir des endroits auxquels vous n’auriez
@@ -13,7 +13,7 @@
         Rivera, ou au contraire découvrir un petit village au bord de la
         Méditerranée.
       </p>
-      <p class="text-center">
+      <p class="text-center text-custom-p">
         Et n’ayez pas peur, il y en a pour tous les goûts : plage, montagne,
         ville, campagne, nature...
       </p>
@@ -34,14 +34,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 h2 {
   text-transform: capitalize;
-  font-family: $font-family-h2;
-  font-size: $font-size-h2;
-  color: $titre;
-}
-
-p {
-  font-family: $font-family-p;
-  font-size: $font-size-p;
 }
 
 button {

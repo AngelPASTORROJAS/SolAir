@@ -1,17 +1,17 @@
 <template>
   <div class="q-py-md q-px-xl information">
-    <h2 class="text-center">Comment ça marche ?</h2>
+    <h2 class="text-center text-custom-h2">Comment ça marche ?</h2>
     <div class="row justify-evenly articles">
       <article class="text-center questions">
         <img src="./../../assets/icons/question.svg" alt="Icon question" />
-        <p>
+        <p class="text-custom-p">
           Je répond à 10 questions, dans l’objectif de trouver mes préférences :
           lieu, saison, activités, centres d’intérêt, rythme de vie..
         </p>
       </article>
       <article class="text-center reponses">
         <img src="./../../assets/icons/reponse.svg" alt="Icon reponse" />
-        <p>
+        <p class="text-custom-p">
           Mes réponses sont comparées avec tous les lieux répertoriés en France.
         </p>
       </article>
@@ -20,7 +20,7 @@
           src="./../../assets/icons/destination.svg"
           alt="Icon destination"
         />
-        <p>
+        <p class="text-custom-p">
           LA destination qui me correspond à 100% m’est proposée, avec des
           propositions de logements, de moyens de transports et des activités
           d’entreprises partenaires.
@@ -38,15 +38,8 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 h2 {
-  font-family: $font-family-h2;
-  font-size: $font-size-h2;
   color: white;
   padding-bottom: 1em;
-}
-
-p {
-  font-size: $font-size-p;
-  font-family: $font-family-p;
 }
 
 article {
