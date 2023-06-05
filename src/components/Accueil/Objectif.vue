@@ -18,7 +18,7 @@
         ville, campagne, nature...
       </p>
       <a class="text-center" href="#/recherche">
-        <button>Découvrir</button>
+        <button class="button-select-custom">Découvrir</button>
       </a>
     </div>
   </div>
@@ -34,24 +34,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 h2 {
   text-transform: capitalize;
-}
-
-button {
-  margin-top: 3em;
-  background-color: white;
-  color: $cta;
-  font-family: $font-family-p;
-  font-size: $font-size-p;
-  border: 2px solid $cta;
-  border-color: $cta;
-  border-radius: 10px;
-}
-
-button:hover {
-  background: $cta;
-  color: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  cursor: pointer;
 }
 
 .objectif {
