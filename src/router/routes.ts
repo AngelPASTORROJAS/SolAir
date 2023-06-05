@@ -14,6 +14,22 @@ const routes: RouteRecordRaw[] = [
     component: () => import('pages/ContactPage.vue')
   },
   {
+    path: '/mon-compte',
+    component: () => import('pages/ComptePage.vue')
+  },
+  {
+    path: '/connexion',
+    component: () => import('pages/ConnexionPage.vue')
+  },
+  {
+    path: '/inscription',
+    component: () => import('pages/InscriptionPage.vue')
+  },
+  {
+    path: '/recherche',
+    component: () => import('pages/RecherchePage.vue')
+  },
+  {
     path: '/test',
     component: () => import('layouts/MainLayout.vue'),
     children: [{ path: '', component: () => import('pages/IndexPage.vue') }],

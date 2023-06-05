@@ -16,7 +16,7 @@
         <a class="gt-sm text-white text-nav" href="#/contact">Contact</a>
       </li>
       <li>
-        <q-btn class=" button-custom" to="/login" size="30px" flat round icon="perm_identity" />
+        <q-btn class=" button-custom" to="/connexion" size="30px" flat round icon="perm_identity" />
       </li>
     </ul>
   </nav>
