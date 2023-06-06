@@ -1,6 +1,6 @@
 <template>
   <HeaderCustom label="Effectuez votre recherche" />
-  <div class="text-center items-center justify-center">
+  <div hidden class="text-center items-center justify-center">
     <h1>Question 1</h1>
     <h2 class="text-custom-h2">
       Quels types de lieu préférez-vous pour vos vacances ?
@@ -21,7 +21,7 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
-  <div class="text-center items-center justify-center">
+  <div hidden class="text-center items-center justify-center">
     <h1>Question 2</h1>
     <h2 class="text-custom-h2">Quels sont vos centres d'intérêt ?</h2>
     <div class="row justify-center">
@@ -52,7 +52,7 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
-  <div class="text-center items-center justify-center">
+  <div hidden class="text-center items-center justify-center">
     <h1>Question 3</h1>
     <h2 class="text-custom-h2">Quel type de voyage préférez-vous ?</h2>
     <div class="row justify-center">
@@ -83,7 +83,7 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
-  <div class="text-center items-center justify-center">
+  <div hidden class="text-center items-center justify-center">
     <h1>Question 4</h1>
     <h2 class="text-custom-h2">Quand voulez-vous voyager ?</h2>
     <div class="row justify-center">
@@ -106,7 +106,7 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
-  <div class="text-center items-center justify-center">
+  <div hidden class="text-center items-center justify-center">
     <h1>Question 5</h1>
     <h2 class="text-custom-h2">Combien de temps voulez-vous partir ?</h2>
     <div class="row justify-center">
@@ -154,6 +154,37 @@
           14J
         </p>
         <p class="text-custom-p">Deux semaines</p>
+      </article>
+    </div>
+    <button class="button-select-custom q-mb-lg">Suivant</button>
+  </div>
+  <div class="text-center items-center justify-center">
+    <h1>Question 6</h1>
+    <h2 class="text-custom-h2">Quel est votre continent de départ ?</h2>
+    <div class="row justify-center">
+      <article class="text-center amerique q-pa-lg">
+        <img src="../assets/questions/amerique.svg" alt="" />
+        <p class="text-custom-p">Amerique</p>
+      </article>
+      <article class="text-center europe q-pa-lg">
+        <img src="../assets/questions/europe.svg" alt="" />
+        <p class="text-custom-p">Europe</p>
+      </article>
+      <article class="text-center asie q-pa-lg">
+        <img src="../assets/questions/asie.svg" alt="" />
+        <p class="text-custom-p">Asie</p>
+      </article>
+      <article class="text-center antarctique q-pa-lg">
+        <img src="../assets/questions/antarctique.svg" alt="" />
+        <p class="text-custom-p">Antarctique</p>
+      </article>
+      <article class="text-center afrique q-pa-lg">
+        <img src="../assets/questions/afrique.svg" alt="" />
+        <p class="text-custom-p">Afrique</p>
+      </article>
+      <article class="text-center oceanie q-pa-lg">
+        <img src="../assets/questions/oceanie.svg" alt="" />
+        <p class="text-custom-p">Océanie</p>
       </article>
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
@@ -310,6 +341,44 @@ article:hover {
   }
 }
 
+
+
+.amerique:hover {
+  img {
+    content: url('./../assets/questions/amerique-hover.svg');
+  }
+}
+
+.europe:hover {
+  img {
+    content: url('./../assets/questions/europe-hover.svg');
+  }
+}
+
+.asie:hover {
+  img {
+    content: url('./../assets/questions/asie-hover.svg');
+  }
+}
+
+.antarctique:hover {
+  img {
+    content: url('./../assets/questions/antarctique-hover.svg');
+  }
+}
+
+.afrique:hover {
+  img {
+    content: url('./../assets/questions/afrique-hover.svg');
+  }
+}
+
+.oceanie:hover {
+  img {
+    content: url('./../assets/questions/oceanie-hover.svg');
+  }
+}
+
 h1 {
   font-family: 'Montserrat';
   font-style: normal;
@@ -317,8 +386,6 @@ h1 {
   font-size: 62px;
   line-height: 76px;
   text-transform: capitalize;
-
-  /* Paragraphe */
   color: #494949;
 }
 </style>
