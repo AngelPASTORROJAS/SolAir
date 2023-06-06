@@ -1,6 +1,6 @@
 <template>
-  <div class="row justify-center items-start q-py-md q-px-xl objectif">
-    <div class="column q-pb-lg justify-evenly description">
+  <div class="q-pa-md q-gutter-md q-layout-column q-layout-wrap objectif">
+    <div class="q-col-xs-12 q-col-md-6 text-center description">
       <h2 class="text-center text-custom-h2">
         L’objectif de Sol’Air ? Trouver la destination de vos rêves !
       </h2>
@@ -21,7 +21,7 @@
         <button class="button-select-custom">Découvrir</button>
       </a>
     </div>
-    <div class="carrousel">
+    <div class="q-col-xs-12 q-col-md-6 carrousel">
       <article
         style="
           color: white;
@@ -84,7 +84,6 @@ h2 {
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
-  min-width: 50%;
 }
 
 .card {
@@ -107,5 +106,41 @@ h2 {
 .paris {
   background: url("../../assets/publicitaire/paris.jpg") center / cover
     no-repeat;
+}
+
+.q-pa-md {
+  padding: 16px;
+}
+
+.q-gutter-md {
+  margin: -8px;
+}
+
+.q-layout-column {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.q-layout-wrap {
+  flex-wrap: wrap;
+}
+
+.q-col-xs-12 {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.q-col-md-6 {
+  flex-basis: calc(50% - 16px);
+  max-width: calc(50% - 16px);
+  margin: 8px;
+}
+
+@media (max-width: 599px) {
+  .q-col-md-6 {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin: 8px 0;
+  }
 }
 </style>
