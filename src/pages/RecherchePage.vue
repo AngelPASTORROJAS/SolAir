@@ -2,25 +2,83 @@
   <HeaderCustom label="Effectuez votre recherche" />
   <div class="text-center items-center justify-center">
     <h1>Question 1</h1>
-    <h2 class="text-custom-h2">Quels types de lieu préférez-vous pour vos vacances ?</h2>
+    <h2 class="text-custom-h2">
+      Quels types de lieu préférez-vous pour vos vacances ?
+    </h2>
     <div class="row justify-center">
       <article class="text-center montagne q-pa-lg">
-        <img src="../assets/questions/montagne.svg" alt=""/>
-        <p class="text-custom-p">
-          Montagne
-        </p>
+        <img src="../assets/questions/montagne.svg" alt="" />
+        <p class="text-custom-p">Montagne</p>
       </article>
       <article class="text-center mer q-pa-lg">
-        <img src="../assets/questions/mer.svg" alt=""/>
-        <p class="text-custom-p">
-          Mer
-        </p>
+        <img src="../assets/questions/mer.svg" alt="" />
+        <p class="text-custom-p">Mer</p>
       </article>
       <article class="text-center compagne q-pa-lg">
-        <img src="../assets/questions/compagne.svg" alt=""/>
-        <p class="text-custom-p">
-          Compagne
-        </p>
+        <img src="../assets/questions/compagne.svg" alt="" />
+        <p class="text-custom-p">Compagne</p>
+      </article>
+    </div>
+    <button class="button-select-custom q-mb-lg">Suivant</button>
+  </div>
+  <div class="text-center items-center justify-center">
+    <h1>Question 2</h1>
+    <h2 class="text-custom-h2">Quels sont vos centres d'intérêt ?</h2>
+    <div class="row justify-center">
+      <article class="text-center plage q-pa-lg">
+        <img src="../assets/questions/plage.svg" alt="" />
+        <p class="text-custom-p">Plage</p>
+      </article>
+      <article class="text-center culture q-pa-lg">
+        <img src="../assets/questions/culture.svg" alt="" />
+        <p class="text-custom-p">Culture</p>
+      </article>
+      <article class="text-center art q-pa-lg">
+        <img src="../assets/questions/art.svg" alt="" />
+        <p class="text-custom-p">Art</p>
+      </article>
+      <article class="text-center nature q-pa-lg">
+        <img src="../assets/questions/nature.svg" alt="" />
+        <p class="text-custom-p">Nature</p>
+      </article>
+      <article class="text-center sports q-pa-lg">
+        <img src="../assets/questions/sports.svg" alt="" />
+        <p class="text-custom-p">Sports</p>
+      </article>
+      <article class="text-center gastronomie q-pa-lg">
+        <img src="../assets/questions/gastronomie.svg" alt="" />
+        <p class="text-custom-p">Gastronomie</p>
+      </article>
+    </div>
+    <button class="button-select-custom q-mb-lg">Suivant</button>
+  </div>
+  <div class="text-center items-center justify-center">
+    <h1>Question 3</h1>
+    <h2 class="text-custom-h2">Quel type de voyage préférez-vous ?</h2>
+    <div class="row justify-center">
+      <article class="text-center aventure q-pa-lg">
+        <img src="../assets/questions/aventure.svg" alt="" />
+        <p class="text-custom-p">Aventure</p>
+      </article>
+      <article class="text-center decouverte q-pa-lg">
+        <img src="../assets/questions/decouverte.svg" alt="" />
+        <p class="text-custom-p">Découverte</p>
+      </article>
+      <article class="text-center detente q-pa-lg">
+        <img src="../assets/questions/detente.svg" alt="" />
+        <p class="text-custom-p">Détente</p>
+      </article>
+      <article class="text-center croisiere q-pa-lg">
+        <img src="../assets/questions/croisiere.svg" alt="" />
+        <p class="text-custom-p">Croisière</p>
+      </article>
+      <article class="text-center escapade-maritime q-pa-lg">
+        <img src="../assets/questions/escapade-maritime.svg" alt="" />
+        <p class="text-custom-p">Escapade maritime</p>
+      </article>
+      <article class="text-center camping q-pa-lg">
+        <img src="../assets/questions/camping.svg" alt="" />
+        <p class="text-custom-p">Camping</p>
       </article>
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
@@ -50,52 +108,114 @@ article {
   border: 1px solid $paragraphe;
 }
 
-.montagne:hover {
-    cursor: pointer;
+article:hover {
+  cursor: pointer;
   background-color: $titre;
   border: 0;
-  img{
-    content: url('./../assets/questions/montagne-hover.svg');
-  }
   p {
     color: white;
+  }
+}
+
+.montagne:hover {
+  img {
+    content: url('./../assets/questions/montagne-hover.svg');
   }
 }
 
 .mer:hover {
-    cursor: pointer;
-  background-color: $titre;
-  border: 0;
-  img{
+  img {
     content: url('./../assets/questions/mer-hover.svg');
-  }
-  p {
-    color: white;
   }
 }
 
 .compagne:hover {
-    cursor: pointer;
-  background-color: $titre;
-  border: 0;
-  img{
+  img {
     content: url('./../assets/questions/compagne-hover.svg');
   }
-  p {
-    color: white;
-  }
+}
 
+.plage:hover {
+  img {
+    content: url('./../assets/questions/plage-hover.svg');
+  }
+}
+
+.culture:hover {
+  img {
+    content: url('./../assets/questions/culture-hover.svg');
+  }
+}
+
+.art:hover {
+  img {
+    content: url('./../assets/questions/art-hover.svg');
+  }
+}
+
+.nature:hover {
+  img {
+    content: url('./../assets/questions/nature-hover.svg');
+  }
+}
+
+.sports:hover {
+  img {
+    content: url('./../assets/questions/sports-hover.svg');
+  }
+}
+
+.gastronomie:hover {
+  img {
+    content: url('./../assets/questions/gastronomie-hover.svg');
+  }
+}
+
+.aventure:hover {
+  img {
+    content: url('./../assets/questions/aventure-hover.svg');
+  }
+}
+
+.decouverte:hover {
+  img {
+    content: url('./../assets/questions/decouverte-hover.svg');
+  }
+}
+
+.detente:hover {
+  img {
+    content: url('./../assets/questions/detente-hover.svg');
+  }
+}
+
+.croisiere:hover {
+  img {
+    content: url('./../assets/questions/croisiere-hover.svg');
+  }
+}
+
+.escapade-maritime:hover {
+  img {
+    content: url('./../assets/questions/escapade-maritime-hover.svg');
+  }
+}
+
+.camping:hover {
+  img {
+    content: url('./../assets/questions/camping-hover.svg');
+  }
 }
 
 h1 {
   font-family: 'Montserrat';
-font-style: normal;
-font-weight: 700;
-font-size: 62px;
-line-height: 76px;
-text-transform: capitalize;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 62px;
+  line-height: 76px;
+  text-transform: capitalize;
 
-/* Paragraphe */
-color: #494949;
+  /* Paragraphe */
+  color: #494949;
 }
 </style>
