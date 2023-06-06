@@ -106,6 +106,58 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
+  <div class="text-center items-center justify-center">
+    <h1>Question 5</h1>
+    <h2 class="text-custom-h2">Combien de temps voulez-vous partir ?</h2>
+    <div class="row justify-center">
+      <article class="text-center week-end q-pa-lg">
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 87px;
+            line-height: 105px;
+            color: #494949;
+          "
+        >
+          2J
+        </p>
+        <p class="text-custom-p">Un week-end</p>
+      </article>
+      <article class="text-center une-semaine q-pa-lg">
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 87px;
+            line-height: 105px;
+            color: #494949;
+          "
+        >
+          7J
+        </p>
+        <p class="text-custom-p">Une semaine</p>
+      </article>
+      <article class="text-center deux-semaines q-pa-lg">
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 87px;
+            line-height: 105px;
+            color: #494949;
+          "
+        >
+          14J
+        </p>
+        <p class="text-custom-p">Deux semaines</p>
+      </article>
+    </div>
+    <button class="button-select-custom q-mb-lg">Suivant</button>
+  </div>
   <FooterComponent />
 </template>
 <script lang="ts">
@@ -122,6 +174,10 @@ export default defineComponent({
 });
 </script>
 <style lang="scss" scoped>
+h2 {
+  text-transform: uppercase;
+}
+
 article {
   width: 222px;
   margin: 15px;
@@ -136,7 +192,7 @@ article:hover {
   background-color: $titre;
   border: 0;
   p {
-    color: white;
+    color: white !important;
   }
 }
 
