@@ -1,6 +1,6 @@
 <template>
   <div class="row justify-center items-start q-py-md q-px-xl objectif">
-    <div class="column justify-evenly description">
+    <div class="column q-pb-lg justify-evenly description">
       <h2 class="text-center text-custom-h2">
         L’objectif de Sol’Air ? Trouver la destination de vos rêves !
       </h2>
@@ -21,6 +21,40 @@
         <button class="button-select-custom">Découvrir</button>
       </a>
     </div>
+    <div class="carrousel">
+      <article
+        style="
+          color: white;
+          font-family: 'Bebas Neue';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 46px;
+          line-height: 55px;
+          padding: 1rem;
+        "
+        class="card mont-blanc"
+      >
+        MONT BLANC
+      </article>
+      <article style="
+          color: white;
+          font-family: 'Bebas Neue';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 46px;
+          line-height: 55px;
+          padding: 1rem;
+        " class="card monaco">MONACO</article>
+      <article style="
+          color: white;
+          font-family: 'Bebas Neue';
+          font-style: normal;
+          font-weight: 400;
+          font-size: 46px;
+          line-height: 55px;
+          padding: 1rem;
+        " class="card paris">PARIS</article>
+    </div>
   </div>
 </template>
 
@@ -32,11 +66,46 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+
 h2 {
   text-transform: capitalize;
 }
 
 .objectif {
   padding: 4em 4em;
+}
+
+.carrousel {
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: 1.2rem;
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  min-width: 50%;
+}
+
+.card {
+  scroll-snap-align: start;
+  border-radius: 20px;
+  min-height: 438px;
+  min-width: 284px;
+  align-items: center;
+  justify-content: center;
+}
+
+.mont-blanc {
+  background: url('../../assets/publicitaire/mont-blanc.jpg') center / cover
+    no-repeat;
+}
+.monaco {
+  background: url('../../assets/publicitaire/monaco.jpg') center / cover
+    no-repeat;
+}
+.paris {
+  background: url("../../assets/publicitaire/paris.jpg") center / cover
+    no-repeat;
 }
 </style>
