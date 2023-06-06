@@ -83,6 +83,29 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
+  <div class="text-center items-center justify-center">
+    <h1>Question 4</h1>
+    <h2 class="text-custom-h2">Quand voulez-vous voyager ?</h2>
+    <div class="row justify-center">
+      <article class="text-center hiver q-pa-lg">
+        <img src="../assets/questions/hiver.svg" alt="" />
+        <p class="text-custom-p">Hiver</p>
+      </article>
+      <article class="text-center printemps q-pa-lg">
+        <img src="../assets/questions/printemps.svg" alt="" />
+        <p class="text-custom-p">Printemps</p>
+      </article>
+      <article class="text-center ete q-pa-lg">
+        <img src="../assets/questions/ete.svg" alt="" />
+        <p class="text-custom-p">Été</p>
+      </article>
+      <article class="text-center automne q-pa-lg">
+        <img src="../assets/questions/automne.svg" alt="" />
+        <p class="text-custom-p">Automne</p>
+      </article>
+    </div>
+    <button class="button-select-custom q-mb-lg">Suivant</button>
+  </div>
   <FooterComponent />
 </template>
 <script lang="ts">
@@ -204,6 +227,30 @@ article:hover {
 .camping:hover {
   img {
     content: url('./../assets/questions/camping-hover.svg');
+  }
+}
+
+.hiver:hover {
+  img {
+    content: url('./../assets/questions/hiver-hover.svg');
+  }
+}
+
+.printemps:hover {
+  img {
+    content: url('./../assets/questions/printemps-hover.svg');
+  }
+}
+
+.ete:hover {
+  img {
+    content: url('./../assets/questions/ete-hover.svg');
+  }
+}
+
+.automne:hover {
+  img {
+    content: url('./../assets/questions/automne-hover.svg');
   }
 }
 
