@@ -189,6 +189,21 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
+  <div class="text-center items-center justify-center">
+    <h1>Question 7</h1>
+    <h2 class="text-custom-h2">Préférez-vous les destinations populaires et touristiques ou les endroits moins connus et plus authentiques ?</h2>
+    <div class="row justify-center">
+      <article class="text-center touristique q-pa-lg">
+        <img src="../assets/questions/touristique.svg" alt="" />
+        <p class="text-custom-p">Populaires et touristiques</p>
+      </article>
+      <article class="text-center authentique q-pa-lg">
+        <img src="../assets/questions/authentique.svg" alt="" />
+        <p class="text-custom-p">Moins connus et plus authentiques</p>
+      </article>
+    </div>
+    <button class="button-select-custom q-mb-lg">Suivant</button>
+  </div>
   <FooterComponent />
 </template>
 <script lang="ts">
@@ -376,6 +391,18 @@ article:hover {
 .oceanie:hover {
   img {
     content: url('./../assets/questions/oceanie-hover.svg');
+  }
+}
+
+.authentique:hover {
+  img {
+    content: url('./../assets/questions/authentique-hover.svg');
+  }
+}
+
+.touristique:hover {
+  img {
+    content: url('./../assets/questions/touristique-hover.svg');
   }
 }
 
