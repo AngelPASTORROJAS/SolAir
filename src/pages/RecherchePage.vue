@@ -227,6 +227,30 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
+  <div class="text-center items-center justify-center">
+    <h1>Question 9</h1>
+    <h2 class="text-custom-h2">
+      Préférez-vous voyager en solo, en couple, en famille ou en groupe ?     </h2>
+    <div class="row justify-center">
+      <article class="text-center solo q-pa-lg">
+        <img src="../assets/questions/solo.svg" alt="" />
+        <p class="text-custom-p">Solo</p>
+      </article>
+      <article class="text-center couple q-pa-lg">
+        <img src="../assets/questions/couple.svg" alt="" />
+        <p class="text-custom-p">En couple</p>
+      </article>
+      <article class="text-center famille q-pa-lg">
+        <img src="../assets/questions/famille.svg" alt="" />
+        <p class="text-custom-p">Famille</p>
+      </article>
+      <article class="text-center groupe q-pa-lg">
+        <img src="../assets/questions/groupe.svg" alt="" />
+        <p class="text-custom-p">Groupe</p>
+      </article>
+    </div>
+    <button class="button-select-custom q-mb-lg">Suivant</button>
+  </div>
   <FooterComponent />
 </template>
 <script lang="ts">
@@ -442,6 +466,30 @@ article:hover {
 .luxe:hover {
   img {
     content: url('./../assets/questions/luxe-hover.svg');
+  }
+}
+
+.solo:hover {
+  img {
+    content: url('./../assets/questions/solo-hover.svg');
+  }
+}
+
+.couple:hover {
+  img {
+    content: url('./../assets/questions/couple-hover.svg');
+  }
+}
+
+.famille:hover {
+  img {
+    content: url('./../assets/questions/famille-hover.svg');
+  }
+}
+
+.groupe:hover {
+  img {
+    content: url('./../assets/questions/groupe-hover.svg');
   }
 }
 
