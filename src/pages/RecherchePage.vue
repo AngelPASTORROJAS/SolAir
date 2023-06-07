@@ -1,6 +1,6 @@
 <template>
   <HeaderCustom label="Effectuez votre recherche" />
-  <div hidden class="text-center items-center justify-center">
+  <div class="text-center items-center justify-center">
     <h1>Question 1</h1>
     <h2 class="text-custom-h2">
       Quels types de lieu préférez-vous pour vos vacances ?
@@ -21,7 +21,7 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
-  <div hidden class="text-center items-center justify-center">
+  <div class="text-center items-center justify-center">
     <h1>Question 2</h1>
     <h2 class="text-custom-h2">Quels sont vos centres d'intérêt ?</h2>
     <div class="row justify-center">
@@ -52,7 +52,7 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
-  <div hidden class="text-center items-center justify-center">
+  <div class="text-center items-center justify-center">
     <h1>Question 3</h1>
     <h2 class="text-custom-h2">Quel type de voyage préférez-vous ?</h2>
     <div class="row justify-center">
@@ -83,7 +83,7 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
-  <div hidden class="text-center items-center justify-center">
+  <div class="text-center items-center justify-center">
     <h1>Question 4</h1>
     <h2 class="text-custom-h2">Quand voulez-vous voyager ?</h2>
     <div class="row justify-center">
@@ -106,7 +106,7 @@
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
   </div>
-  <div hidden class="text-center items-center justify-center">
+  <div class="text-center items-center justify-center">
     <h1>Question 5</h1>
     <h2 class="text-custom-h2">Combien de temps voulez-vous partir ?</h2>
     <div class="row justify-center">
@@ -358,10 +358,16 @@ article:hover {
   }
 }
 
-.montagne:hover {
-  img {
-    content: url('./../assets/questions/montagne-hover.svg');
+@mixin button-hover($image-name) {
+  &:hover {
+    img {
+      content: url('../assets/questions/#{$image-name}-hover.svg');
+    }
   }
+}
+
+.montagne {
+  @include button-hover('montagne');
 }
 
 .mer:hover {
