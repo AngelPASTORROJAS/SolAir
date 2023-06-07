@@ -191,7 +191,10 @@
   </div>
   <div class="text-center items-center justify-center">
     <h1>Question 7</h1>
-    <h2 class="text-custom-h2">Préférez-vous les destinations populaires et touristiques ou les endroits moins connus et plus authentiques ?</h2>
+    <h2 class="text-custom-h2">
+      Préférez-vous les destinations populaires et touristiques ou les endroits
+      moins connus et plus authentiques ?
+    </h2>
     <div class="row justify-center">
       <article class="text-center touristique q-pa-lg">
         <img src="../assets/questions/touristique.svg" alt="" />
@@ -200,6 +203,26 @@
       <article class="text-center authentique q-pa-lg">
         <img src="../assets/questions/authentique.svg" alt="" />
         <p class="text-custom-p">Moins connus et plus authentiques</p>
+      </article>
+    </div>
+    <button class="button-select-custom q-mb-lg">Suivant</button>
+  </div>
+  <div class="text-center items-center justify-center">
+    <h1>Question 8</h1>
+    <h2 class="text-custom-h2">
+      Quel est votre budget pour le voyage ?    </h2>
+    <div class="row justify-center">
+      <article class="text-center economique q-pa-lg">
+        <img src="../assets/questions/economique.svg" alt="" />
+        <p class="text-custom-p">Économique</p>
+      </article>
+      <article class="text-center milieu-gamme q-pa-lg">
+        <img src="../assets/questions/milieu-gamme.svg" alt="" />
+        <p class="text-custom-p">Milieu de gamme</p>
+      </article>
+      <article class="text-center luxe q-pa-lg">
+        <img src="../assets/questions/luxe.svg" alt="" />
+        <p class="text-custom-p">Luxe</p>
       </article>
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
@@ -356,8 +379,6 @@ article:hover {
   }
 }
 
-
-
 .amerique:hover {
   img {
     content: url('./../assets/questions/amerique-hover.svg');
@@ -403,6 +424,24 @@ article:hover {
 .touristique:hover {
   img {
     content: url('./../assets/questions/touristique-hover.svg');
+  }
+}
+
+.economique:hover {
+  img {
+    content: url('./../assets/questions/economique-hover.svg');
+  }
+}
+
+.milieu-gamme:hover {
+  img {
+    content: url('./../assets/questions/milieu-gamme-hover.svg');
+  }
+}
+
+.luxe:hover {
+  img {
+    content: url('./../assets/questions/luxe-hover.svg');
   }
 }
 
