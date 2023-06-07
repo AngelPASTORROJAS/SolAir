@@ -6,7 +6,10 @@
       Quels types de lieu préférez-vous pour vos vacances ?
     </h2>
     <div class="row justify-center">
-      <article class="text-center montagne q-pa-lg">
+      <article
+      :class="'text-center q-pa-lg montagne'+(montagne.clicked?'-clicked':'')"
+      @click="toggleClicked(montagne)"
+      >
         <img src="../assets/questions/montagne.svg" alt="" />
         <p class="text-custom-p">Montagne</p>
       </article>
@@ -323,12 +326,99 @@
   <FooterComponent />
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref } from 'vue';
 import HeaderCustom from 'src/components/HeaderCustom.vue';
 import FooterComponent from 'src/components/FooterComponent.vue';
 
 export default defineComponent({
   name: 'ConnexionPage',
+  setup() {
+    interface Critere {
+      id: number;
+      clicked: boolean;
+    }
+    const montagne = ref({ id: 1, clicked: false } as Critere);
+    const mer = ref({ id: 2, clicked: false });
+    const compagne = ref({ id: 3, clicked: false });
+    const plage = ref({ id: 4, clicked: false });
+    const culture = ref({ id: 5, clicked: false });
+    const art = ref({ id: 6, clicked: false });
+    const nature = ref({ id: 7, clicked: false });
+    const sports = ref({ id: 8, clicked: false });
+    const gastronomie = ref({ id: 9, clicked: false });
+    const aventure = ref({ id: 10, clicked: false });
+    const decouverte = ref({ id: 11, clicked: false });
+    const detente = ref({ id: 12, clicked: false });
+    const croisiere = ref({ id: 13, clicked: false });
+    const escapadeMaritime = ref({ id: 14, clicked: false });
+    const camping = ref({ id: 15, clicked: false });
+    const hiver = ref({ id: 16, clicked: false });
+    const printemps = ref({ id: 17, clicked: false });
+    const ete = ref({ id: 18, clicked: false });
+    const automne = ref({ id: 19, clicked: false });
+    const weekEnd = ref({ id: 20, clicked: false });
+    const semaine = ref({ id: 21, clicked: false });
+    const semaines = ref({ id: 22, clicked: false });
+    const populaires = ref({ id: 23, clicked: false });
+    const authentique = ref({ id: 24, clicked: false });
+    const amerique = ref({ id: 25, clicked: false });
+    const europe = ref({ id: 26, clicked: false });
+    const asie = ref({ id: 27, clicked: false });
+    const antarctique = ref({ id: 28, clicked: false });
+    const afrique = ref({ id: 29, clicked: false });
+    const oceanie = ref({ id: 30, clicked: false });
+    const economique = ref({ id: 32, clicked: false });
+    const milieuGamme = ref({ id: 32, clicked: false });
+    const luxe = ref({ id: 33, clicked: false });
+    const solo = ref({ id: 34, clicked: false });
+    const couple = ref({ id: 35, clicked: false });
+    const famille = ref({ id: 36, clicked: false });
+    const groupe = ref({ id: 37, clicked: false });
+
+    function toggleClicked(choice: Critere) {
+      choice.clicked = !choice.clicked;
+    }
+    return {
+      montagne,
+      mer,
+      compagne,
+      plage,
+      culture,
+      art,
+      nature,
+      sports,
+      gastronomie,
+      aventure,
+      decouverte,
+      detente,
+      croisiere,
+      escapadeMaritime,
+      camping,
+      hiver,
+      printemps,
+      ete,
+      automne,
+      weekEnd,
+      semaine,
+      semaines,
+      populaires,
+      authentique,
+      amerique,
+      europe,
+      asie,
+      antarctique,
+      afrique,
+      oceanie,
+      economique,
+      milieuGamme,
+      luxe,
+      solo,
+      couple,
+      famille,
+      groupe,
+      toggleClicked
+    };
+  },
   components: {
     HeaderCustom,
     FooterComponent,
@@ -349,7 +439,7 @@ article {
   border: 1px solid $paragraphe;
 }
 
-article:hover {
+article:hover, .montagne-clicked {
   cursor: pointer;
   background-color: $titre;
   border: 0;
@@ -358,7 +448,7 @@ article:hover {
   }
 }
 
-.montagne:hover {
+.montagne:hover, .montagne-clicked {
   img {
     content: url('./../assets/questions/montagne-hover.svg');
   }
@@ -436,7 +526,7 @@ article:hover {
   }
 }
 
-.escapade-maritime:hover {
+.escapade-maritime-maritime:hover {
   img {
     content: url('./../assets/questions/escapade-maritime-hover.svg');
   }
@@ -526,7 +616,7 @@ article:hover {
   }
 }
 
-.milieu-gamme:hover {
+.milieu-gamme-gamme:hover {
   img {
     content: url('./../assets/questions/milieu-gamme-hover.svg');
   }
