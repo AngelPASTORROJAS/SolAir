@@ -358,16 +358,10 @@ article:hover {
   }
 }
 
-@mixin button-hover($image-name) {
-  &:hover {
-    img {
-      content: url('../assets/questions/#{$image-name}-hover.svg');
-    }
+.montagne:hover {
+  img {
+    content: url('./../assets/questions/montagne-hover.svg');
   }
-}
-
-.montagne {
-  @include button-hover('montagne');
 }
 
 .mer:hover {
