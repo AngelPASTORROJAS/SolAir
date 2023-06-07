@@ -209,8 +209,7 @@
   </div>
   <div class="text-center items-center justify-center">
     <h1>Question 8</h1>
-    <h2 class="text-custom-h2">
-      Quel est votre budget pour le voyage ?    </h2>
+    <h2 class="text-custom-h2">Quel est votre budget pour le voyage ?</h2>
     <div class="row justify-center">
       <article class="text-center economique q-pa-lg">
         <img src="../assets/questions/economique.svg" alt="" />
@@ -230,7 +229,8 @@
   <div class="text-center items-center justify-center">
     <h1>Question 9</h1>
     <h2 class="text-custom-h2">
-      Préférez-vous voyager en solo, en couple, en famille ou en groupe ?     </h2>
+      Préférez-vous voyager en solo, en couple, en famille ou en groupe ?
+    </h2>
     <div class="row justify-center">
       <article class="text-center solo q-pa-lg">
         <img src="../assets/questions/solo.svg" alt="" />
@@ -247,6 +247,75 @@
       <article class="text-center groupe q-pa-lg">
         <img src="../assets/questions/groupe.svg" alt="" />
         <p class="text-custom-p">Groupe</p>
+      </article>
+    </div>
+    <button class="button-select-custom q-mb-lg">Suivant</button>
+  </div>
+  <div class="text-center items-center justify-center">
+    <h1>Question 10</h1>
+    <h2 class="text-custom-h2">
+      Préférez-vous voyager en solo, en couple, en famille ou en groupe ?
+    </h2>
+    <div class="row justify-center">
+      <article class="text-center solo q-pa-lg">
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 62px;
+            line-height: 75px;
+            text-align: center;
+            color: #494949;
+          "
+        >
+          250€
+        </p>
+      </article>
+      <article class="text-center couple q-pa-lg">
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 62px;
+            line-height: 75px;
+            text-align: center;
+            color: #494949;
+          "
+        >
+          500€
+        </p>
+      </article>
+      <article class="text-center famille q-pa-lg">
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 62px;
+            line-height: 75px;
+            text-align: center;
+            color: #494949;
+          "
+        >
+          750€
+        </p>
+      </article>
+      <article class="text-center groupe q-pa-lg">
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 62px;
+            line-height: 75px;
+            text-align: center;
+            color: #494949;
+          "
+        >
+          +1000€
+        </p>
       </article>
     </div>
     <button class="button-select-custom q-mb-lg">Suivant</button>
