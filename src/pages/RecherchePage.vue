@@ -382,7 +382,6 @@
     </div>
     <button @click="suivant10" class="button-select-custom q-mb-lg">Suivant</button>
   </div>
-  <p>{{ users[0] }}</p>
   <FooterComponent />
 </template>
 
