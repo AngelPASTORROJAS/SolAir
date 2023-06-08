@@ -7,16 +7,27 @@
       voyagez à votre façon
     </h1>
     <div class="accueil-button">
-      <button class="button-1">Affinez votre recherche</button>
+      <button @click="redirect" class="button-1">Affinez votre recherche</button>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, resolveDirective } from 'vue';
 import NavBar from '../NavBar.vue';
+import { useRouter } from 'vue-router';
 export default defineComponent({
   name: 'AccueilTop1',
+  setup(){
+    const router = useRouter();
+    const routeRecherche = {
+        name: 'Recherche'
+        }
+    const redirect = ()=>{
+      router.push(routeRecherche);
+    }
+    return {redirect}
+  },
   components: {
     NavBar,
   },
