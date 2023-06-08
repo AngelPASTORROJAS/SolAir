@@ -1,11 +1,11 @@
 <template>
-    <HeaderCustom :label="destination.nom??'Titre'" />
+    <HeaderCustom :label="destination.ville??" />
     <div>
         <div>
             <h2>{{ destination.nom }}</h2>
             <p>{{ destination.description }}</p>
         </div>
-        <img :src="destination.urlimage" alt="">
+        <img :src="destination.urlimage">
     </div>
     <FooterComponent />
   </template>
