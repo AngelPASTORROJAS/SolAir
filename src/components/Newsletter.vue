@@ -41,10 +41,10 @@ export default defineComponent({
     const onSubmit = () => {
       if (mailInput.value) {
         $q.notify({
-          color: 'red',
+          color: 'green',
           textColor: 'white',
-          icon: 'warning',
-          message: 'Ecrit ' + mailInput.value,
+          icon: 'check_circle',
+          message: 'Envoyé',
         });
       }
     };
