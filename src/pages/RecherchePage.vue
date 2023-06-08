@@ -6,232 +6,334 @@
       Quels types de lieu préférez-vous pour vos vacances ?
     </h2>
     <div class="row justify-center">
-      <article @click="toggleClicked(montagne)" :class="
-        'text-center q-pa-lg montagne' + (montagne.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(montagne)"
+        :class="
+          'text-center q-pa-lg montagne' + (montagne.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/montagne.svg" alt="" />
         <p class="text-custom-p">Montagne</p>
       </article>
-      <article @click="toggleClicked(mer)" :class="'text-center q-pa-lg mer' + (mer.clicked ? '-clicked' : '')">
+      <article
+        @click="toggleClicked(mer)"
+        :class="'text-center q-pa-lg mer' + (mer.clicked ? '-clicked' : '')"
+      >
         <img src="../assets/questions/mer.svg" alt="" />
         <p class="text-custom-p">Mer</p>
       </article>
-      <article @click="toggleClicked(compagne)" :class="
-        'text-center q-pa-lg compagne' + (compagne.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(compagne)"
+        :class="
+          'text-center q-pa-lg compagne' + (compagne.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/compagne.svg" alt="" />
         <p class="text-custom-p">Compagne</p>
       </article>
     </div>
-    <button @click="suivant1" class="button-select-custom q-mb-lg">Suivant</button>
+    <button @click="suivant1" class="button-select-custom q-mb-lg">
+      Suivant
+    </button>
   </div>
   <div :hidden="question2" class="text-center items-center justify-center">
     <h1>Question 2</h1>
     <h2 class="text-custom-h2">Quels sont vos centres d'intérêt ?</h2>
     <div class="row justify-center">
-      <article @click="toggleClicked(plage)" :class="'text-center q-pa-lg plage' + (plage.clicked ? '-clicked' : '')">
+      <article
+        @click="toggleClicked(plage)"
+        :class="'text-center q-pa-lg plage' + (plage.clicked ? '-clicked' : '')"
+      >
         <img src="../assets/questions/plage.svg" alt="" />
         <p class="text-custom-p">Plage</p>
       </article>
-      <article @click="toggleClicked(culture)" :class="
-        'text-center q-pa-lg culture' + (culture.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(culture)"
+        :class="
+          'text-center q-pa-lg culture' + (culture.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/culture.svg" alt="" />
         <p class="text-custom-p">Culture</p>
       </article>
-      <article @click="toggleClicked(art)" :class="'text-center q-pa-lg art' + (art.clicked ? '-clicked' : '')">
+      <article
+        @click="toggleClicked(art)"
+        :class="'text-center q-pa-lg art' + (art.clicked ? '-clicked' : '')"
+      >
         <img src="../assets/questions/art.svg" alt="" />
         <p class="text-custom-p">Art</p>
       </article>
-      <article @click="toggleClicked(nature)" :class="
-        'text-center q-pa-lg nature' + (nature.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(nature)"
+        :class="
+          'text-center q-pa-lg nature' + (nature.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/nature.svg" alt="" />
         <p class="text-custom-p">Nature</p>
       </article>
-      <article @click="toggleClicked(sports)" :class="
-        'text-center q-pa-lg sports' + (sports.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(sports)"
+        :class="
+          'text-center q-pa-lg sports' + (sports.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/sports.svg" alt="" />
         <p class="text-custom-p">Sports</p>
       </article>
-      <article @click="toggleClicked(gastronomie)" :class="
-        'text-center q-pa-lg gastronomie' +
-        (gastronomie.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(gastronomie)"
+        :class="
+          'text-center q-pa-lg gastronomie' +
+          (gastronomie.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/gastronomie.svg" alt="" />
         <p class="text-custom-p">Gastronomie</p>
       </article>
     </div>
-    <button @click="suivant2" class="button-select-custom q-mb-lg">Suivant</button>
+    <button @click="suivant2" class="button-select-custom q-mb-lg">
+      Suivant
+    </button>
   </div>
   <div :hidden="question3" class="text-center items-center justify-center">
     <h1>Question 3</h1>
     <h2 class="text-custom-h2">Quel type de voyage préférez-vous ?</h2>
     <div class="row justify-center">
-      <article @click="toggleClicked(aventure)" :class="
-        'text-center q-pa-lg aventure' + (aventure.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(aventure)"
+        :class="
+          'text-center q-pa-lg aventure' + (aventure.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/aventure.svg" alt="" />
         <p class="text-custom-p">Aventure</p>
       </article>
-      <article @click="toggleClicked(decouverte)" :class="
-        'text-center q-pa-lg decouverte' +
-        (decouverte.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(decouverte)"
+        :class="
+          'text-center q-pa-lg decouverte' +
+          (decouverte.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/decouverte.svg" alt="" />
         <p class="text-custom-p">Découverte</p>
       </article>
-      <article @click="toggleClicked(detente)" :class="
-        'text-center q-pa-lg detente' + (detente.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(detente)"
+        :class="
+          'text-center q-pa-lg detente' + (detente.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/detente.svg" alt="" />
         <p class="text-custom-p">Détente</p>
       </article>
-      <article @click="toggleClicked(croisiere)" :class="
-        'text-center q-pa-lg croisiere' +
-        (croisiere.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(croisiere)"
+        :class="
+          'text-center q-pa-lg croisiere' +
+          (croisiere.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/croisiere.svg" alt="" />
         <p class="text-custom-p">Croisière</p>
       </article>
-      <article @click="toggleClicked(escapadeMaritime)" :class="
-        'text-center q-pa-lg escapade-maritime' +
-        (escapadeMaritime.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(escapadeMaritime)"
+        :class="
+          'text-center q-pa-lg escapade-maritime' +
+          (escapadeMaritime.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/escapade-maritime.svg" alt="" />
         <p class="text-custom-p">Escapade maritime</p>
       </article>
-      <article @click="toggleClicked(camping)" :class="
-        'text-center q-pa-lg camping' + (camping.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(camping)"
+        :class="
+          'text-center q-pa-lg camping' + (camping.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/camping.svg" alt="" />
         <p class="text-custom-p">Camping</p>
       </article>
     </div>
-    <button @click="suivant3" class="button-select-custom q-mb-lg">Suivant</button>
+    <button @click="suivant3" class="button-select-custom q-mb-lg">
+      Suivant
+    </button>
   </div>
   <div :hidden="question4" class="text-center items-center justify-center">
     <h1>Question 4</h1>
     <h2 class="text-custom-h2">Quand voulez-vous voyager ?</h2>
     <div class="row justify-center">
-      <article @click="toggleClicked(hiver)" :class="'text-center q-pa-lg hiver' + (hiver.clicked ? '-clicked' : '')">
+      <article
+        @click="toggleClicked(hiver)"
+        :class="'text-center q-pa-lg hiver' + (hiver.clicked ? '-clicked' : '')"
+      >
         <img src="../assets/questions/hiver.svg" alt="" />
         <p class="text-custom-p">Hiver</p>
       </article>
-      <article @click="toggleClicked(printemps)" :class="
-        'text-center q-pa-lg printemps' +
-        (printemps.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(printemps)"
+        :class="
+          'text-center q-pa-lg printemps' +
+          (printemps.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/printemps.svg" alt="" />
         <p class="text-custom-p">Printemps</p>
       </article>
-      <article @click="toggleClicked(ete)" :class="'text-center q-pa-lg ete' + (ete.clicked ? '-clicked' : '')">
+      <article
+        @click="toggleClicked(ete)"
+        :class="'text-center q-pa-lg ete' + (ete.clicked ? '-clicked' : '')"
+      >
         <img src="../assets/questions/ete.svg" alt="" />
         <p class="text-custom-p">Été</p>
       </article>
-      <article @click="toggleClicked(automne)" :class="
-        'text-center q-pa-lg automne' + (automne.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(automne)"
+        :class="
+          'text-center q-pa-lg automne' + (automne.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/automne.svg" alt="" />
         <p class="text-custom-p">Automne</p>
       </article>
     </div>
-    <button @click="suivant4" class="button-select-custom q-mb-lg">Suivant</button>
+    <button @click="suivant4" class="button-select-custom q-mb-lg">
+      Suivant
+    </button>
   </div>
   <div :hidden="question5" class="text-center items-center justify-center">
     <h1>Question 5</h1>
     <h2 class="text-custom-h2">Combien de temps voulez-vous partir ?</h2>
     <div class="row justify-center">
-      <article @click="toggleClicked(weekEnd)" :class="
-        'text-center q-pa-lg week-end' + (weekEnd.clicked ? '-clicked' : '')
-      ">
-        <p style="
-                  font-family: 'Inter';
-                  font-style: normal;
-                  font-weight: 900;
-                  font-size: 87px;
-                  line-height: 105px;
-                  color: #494949;
-                ">
+      <article
+        @click="toggleClicked(weekEnd)"
+        :class="
+          'text-center q-pa-lg week-end' + (weekEnd.clicked ? '-clicked' : '')
+        "
+      >
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 87px;
+            line-height: 105px;
+            color: #494949;
+          "
+        >
           2J
         </p>
         <p class="text-custom-p">Un week-end</p>
       </article>
-      <article @click="toggleClicked(semaine)" :class="
-        'text-center q-pa-lg semaine' + (semaine.clicked ? '-clicked' : '')
-      ">
-        <p style="
-                  font-family: 'Inter';
-                  font-style: normal;
-                  font-weight: 900;
-                  font-size: 87px;
-                  line-height: 105px;
-                  color: #494949;
-                ">
+      <article
+        @click="toggleClicked(semaine)"
+        :class="
+          'text-center q-pa-lg semaine' + (semaine.clicked ? '-clicked' : '')
+        "
+      >
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 87px;
+            line-height: 105px;
+            color: #494949;
+          "
+        >
           7J
         </p>
         <p class="text-custom-p">Une semaine</p>
       </article>
-      <article @click="toggleClicked(semaines)" :class="
-        'text-center q-pa-lg semaines' + (semaines.clicked ? '-clicked' : '')
-      ">
-        <p style="
-                  font-family: 'Inter';
-                  font-style: normal;
-                  font-weight: 900;
-                  font-size: 87px;
-                  line-height: 105px;
-                  color: #494949;
-                ">
+      <article
+        @click="toggleClicked(semaines)"
+        :class="
+          'text-center q-pa-lg semaines' + (semaines.clicked ? '-clicked' : '')
+        "
+      >
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 87px;
+            line-height: 105px;
+            color: #494949;
+          "
+        >
           14J
         </p>
         <p class="text-custom-p">Deux semaines</p>
       </article>
     </div>
-    <button @click="suivant5" class="button-select-custom q-mb-lg">Suivant</button>
+    <button @click="suivant5" class="button-select-custom q-mb-lg">
+      Suivant
+    </button>
   </div>
   <div :hidden="question6" class="text-center items-center justify-center">
     <h1>Question 6</h1>
     <h2 class="text-custom-h2">Quel est votre continent de départ ?</h2>
     <div class="row justify-center">
-      <article @click="toggleClicked(amerique)" :class="
-        'text-center q-pa-lg amerique' + (amerique.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(amerique)"
+        :class="
+          'text-center q-pa-lg amerique' + (amerique.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/amerique.svg" alt="" />
         <p class="text-custom-p">Amerique</p>
       </article>
-      <article @click="toggleClicked(europe)" :class="
-        'text-center q-pa-lg europe' + (europe.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(europe)"
+        :class="
+          'text-center q-pa-lg europe' + (europe.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/europe.svg" alt="" />
         <p class="text-custom-p">Europe</p>
       </article>
-      <article @click="toggleClicked(asie)" :class="'text-center q-pa-lg asie' + (asie.clicked ? '-clicked' : '')">
+      <article
+        @click="toggleClicked(asie)"
+        :class="'text-center q-pa-lg asie' + (asie.clicked ? '-clicked' : '')"
+      >
         <img src="../assets/questions/asie.svg" alt="" />
         <p class="text-custom-p">Asie</p>
       </article>
-      <article @click="toggleClicked(antarctique)" :class="
-        'text-center q-pa-lg antarctique' +
-        (antarctique.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(antarctique)"
+        :class="
+          'text-center q-pa-lg antarctique' +
+          (antarctique.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/antarctique.svg" alt="" />
         <p class="text-custom-p">Antarctique</p>
       </article>
-      <article @click="toggleClicked(afrique)" :class="
-        'text-center q-pa-lg afrique' + (afrique.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(afrique)"
+        :class="
+          'text-center q-pa-lg afrique' + (afrique.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/afrique.svg" alt="" />
         <p class="text-custom-p">Afrique</p>
       </article>
-      <article @click="toggleClicked(oceanie)" :class="
-        'text-center q-pa-lg oceanie' + (oceanie.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(oceanie)"
+        :class="
+          'text-center q-pa-lg oceanie' + (oceanie.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/oceanie.svg" alt="" />
         <p class="text-custom-p">Océanie</p>
       </article>
     </div>
-    <button @click="suivant6" class="button-select-custom q-mb-lg">Suivant</button>
+    <button @click="suivant6" class="button-select-custom q-mb-lg">
+      Suivant
+    </button>
   </div>
   <div :hidden="question7" class="text-center items-center justify-center">
     <h1>Question 7</h1>
@@ -240,47 +342,66 @@
       moins connus et plus authentiques ?
     </h2>
     <div class="row justify-center">
-      <article @click="toggleClicked(populaires)" :class="
-        'text-center q-pa-lg populaires' +
-        (populaires.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(populaires)"
+        :class="
+          'text-center q-pa-lg populaires' +
+          (populaires.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/touristique.svg" alt="" />
         <p class="text-custom-p">Populaires et touristiques</p>
       </article>
-      <article @click="toggleClicked(authentique)" :class="
-        'text-center q-pa-lg authentique' +
-        (authentique.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(authentique)"
+        :class="
+          'text-center q-pa-lg authentique' +
+          (authentique.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/authentique.svg" alt="" />
         <p class="text-custom-p">Moins connus et plus authentiques</p>
       </article>
     </div>
-    <button @click="suivant7" class="button-select-custom q-mb-lg">Suivant</button>
+    <button @click="suivant7" class="button-select-custom q-mb-lg">
+      Suivant
+    </button>
   </div>
   <div :hidden="question8" class="text-center items-center justify-center">
     <h1>Question 8</h1>
     <h2 class="text-custom-h2">Quel est votre budget pour le voyage ?</h2>
     <div class="row justify-center">
-      <article @click="toggleClicked(economique)" :class="
-        'text-center q-pa-lg economique' +
-        (economique.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(economique)"
+        :class="
+          'text-center q-pa-lg economique' +
+          (economique.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/economique.svg" alt="" />
         <p class="text-custom-p">Économique</p>
       </article>
-      <article @click="toggleClicked(milieuGamme)" :class="
-        'text-center q-pa-lg milieu-gamme' +
-        (milieuGamme.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(milieuGamme)"
+        :class="
+          'text-center q-pa-lg milieu-gamme' +
+          (milieuGamme.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/milieu-gamme.svg" alt="" />
         <p class="text-custom-p">Milieu de gamme</p>
       </article>
-      <article @click="toggleClicked(luxe)" :class="'text-center q-pa-lg luxe' + (luxe.clicked ? '-clicked' : '')">
+      <article
+        @click="toggleClicked(luxe)"
+        :class="'text-center q-pa-lg luxe' + (luxe.clicked ? '-clicked' : '')"
+      >
         <img src="../assets/questions/luxe.svg" alt="" />
         <p class="text-custom-p">Luxe</p>
       </article>
     </div>
-    <button @click="suivant8" class="button-select-custom q-mb-lg">Suivant</button>
+    <button @click="suivant8" class="button-select-custom q-mb-lg">
+      Suivant
+    </button>
   </div>
   <div :hidden="question9" class="text-center items-center justify-center">
     <h1>Question 9</h1>
@@ -288,30 +409,44 @@
       Préférez-vous voyager en solo, en couple, en famille ou en groupe ?
     </h2>
     <div class="row justify-center">
-      <article @click="toggleClicked(solo)" :class="'text-center q-pa-lg solo' + (solo.clicked ? '-clicked' : '')">
+      <article
+        @click="toggleClicked(solo)"
+        :class="'text-center q-pa-lg solo' + (solo.clicked ? '-clicked' : '')"
+      >
         <img src="../assets/questions/solo.svg" alt="" />
         <p class="text-custom-p">Solo</p>
       </article>
-      <article @click="toggleClicked(couple)" :class="
-        'text-center q-pa-lg couple' + (couple.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(couple)"
+        :class="
+          'text-center q-pa-lg couple' + (couple.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/couple.svg" alt="" />
         <p class="text-custom-p">En couple</p>
       </article>
-      <article @click="toggleClicked(famille)" :class="
-        'text-center q-pa-lg famille' + (famille.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(famille)"
+        :class="
+          'text-center q-pa-lg famille' + (famille.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/famille.svg" alt="" />
         <p class="text-custom-p">Famille</p>
       </article>
-      <article @click="toggleClicked(groupe)" :class="
-        'text-center q-pa-lg groupe' + (groupe.clicked ? '-clicked' : '')
-      ">
+      <article
+        @click="toggleClicked(groupe)"
+        :class="
+          'text-center q-pa-lg groupe' + (groupe.clicked ? '-clicked' : '')
+        "
+      >
         <img src="../assets/questions/groupe.svg" alt="" />
         <p class="text-custom-p">Groupe</p>
       </article>
     </div>
-    <button @click="suivant9" class="button-select-custom q-mb-lg">Suivant</button>
+    <button @click="suivant9" class="button-select-custom q-mb-lg">
+      Suivant
+    </button>
   </div>
   <div :hidden="question10" class="text-center items-center justify-center">
     <h1>Question 10</h1>
@@ -319,68 +454,90 @@
       Quel est votre budget de voyage approximatif ?
     </h2>
     <div class="row justify-center">
-      <article @click="toggleClicked(budget1)" :class="
-        'text-center q-pa-lg budget1' + (budget1.clicked ? '-clicked' : '')
-      ">
-        <p style="
-                  font-family: 'Inter';
-                  font-style: normal;
-                  font-weight: 900;
-                  font-size: 62px;
-                  line-height: 75px;
-                  text-align: center;
-                  color: #494949;
-                ">
+      <article
+        @click="toggleClicked(budget1)"
+        :class="
+          'text-center q-pa-lg budget1' + (budget1.clicked ? '-clicked' : '')
+        "
+      >
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 62px;
+            line-height: 75px;
+            text-align: center;
+            color: #494949;
+          "
+        >
           250€
         </p>
       </article>
-      <article @click="toggleClicked(budget2)" :class="
-        'text-center q-pa-lg budget2' + (budget2.clicked ? '-clicked' : '')
-      ">
-        <p style="
-                  font-family: 'Inter';
-                  font-style: normal;
-                  font-weight: 900;
-                  font-size: 62px;
-                  line-height: 75px;
-                  text-align: center;
-                  color: #494949;
-                ">
+      <article
+        @click="toggleClicked(budget2)"
+        :class="
+          'text-center q-pa-lg budget2' + (budget2.clicked ? '-clicked' : '')
+        "
+      >
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 62px;
+            line-height: 75px;
+            text-align: center;
+            color: #494949;
+          "
+        >
           500€
         </p>
       </article>
-      <article @click="toggleClicked(budget3)" :class="
-        'text-center q-pa-lg budget3' + (budget3.clicked ? '-clicked' : '')
-      ">
-        <p style="
-                  font-family: 'Inter';
-                  font-style: normal;
-                  font-weight: 900;
-                  font-size: 62px;
-                  line-height: 75px;
-                  text-align: center;
-                  color: #494949;
-                ">
+      <article
+        @click="toggleClicked(budget3)"
+        :class="
+          'text-center q-pa-lg budget3' + (budget3.clicked ? '-clicked' : '')
+        "
+      >
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 62px;
+            line-height: 75px;
+            text-align: center;
+            color: #494949;
+          "
+        >
           750€
         </p>
       </article>
-      <article @click="toggleClicked(budget4)" :class="
-        'text-center q-pa-lg budget4' + (budget4.clicked ? '-clicked' : '')
-      ">
-        <p style="
-                  font-family: 'Inter';
-                  font-style: normal;
-                  font-weight: 900;
-                  font-size: 62px;
-                  line-height: 75px;
-                  text-align: center;
-                  color: #494949;
-                ">
+      <article
+        @click="toggleClicked(budget4)"
+        :class="
+          'text-center q-pa-lg budget4' + (budget4.clicked ? '-clicked' : '')
+        "
+      >
+        <p
+          style="
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 62px;
+            line-height: 75px;
+            text-align: center;
+            color: #494949;
+          "
+        >
           +1000€
         </p>
       </article>
     </div>
-    <button @click="suivant10" class="button-select-custom q-mb-lg">Suivant</button>
+    <button @click="suivant10" class="button-select-custom q-mb-lg">
+      Suivant
+    </button>
   </div>
   <FooterComponent />
 </template>
@@ -407,48 +564,51 @@ export default defineComponent({
     const question9 = ref(true);
     const question10 = ref(true);
     const suivant1 = () => {
-      question1.value = true
-      question2.value = false
-    }
+      question1.value = true;
+      question2.value = false;
+    };
     const suivant2 = () => {
-      question2.value = true
-      question3.value = false
-    }
+      question2.value = true;
+      question3.value = false;
+    };
     const suivant3 = () => {
-      question3.value = true
-      question4.value = false
-    }
+      question3.value = true;
+      question4.value = false;
+    };
     const suivant4 = () => {
-      question4.value = true
-      question5.value = false
-    }
+      question4.value = true;
+      question5.value = false;
+    };
     const suivant5 = () => {
-      question5.value = true
-      question6.value = false
-    }
+      question5.value = true;
+      question6.value = false;
+    };
     const suivant6 = () => {
-      question6.value = true
-      question7.value = false
-    }
+      question6.value = true;
+      question7.value = false;
+    };
     const suivant7 = () => {
-      question7.value = true
-      question8.value = false
-    }
+      question7.value = true;
+      question8.value = false;
+    };
     const suivant8 = () => {
-      question8.value = true
-      question9.value = false
-    }
+      question8.value = true;
+      question9.value = false;
+    };
     const suivant9 = () => {
-      question9.value = true
-      question10.value = false
-    }
-    const suivant10 = () => {
-      console.log('envoie des données');
+      question9.value = true;
+      question10.value = false;
+    };
+    const suivant10 = async () => {
+      console.log('envoie des données'+getClickedIds().toString());
       const routeDestination = {
-        name: 'Home',
-      }
-      router.push(routeDestination)
-    }
+        name: 'Destination',
+        params: {
+          body: getClickedIds()
+        }
+      };
+      router.push(routeDestination);
+    };
     const users = ref([] as User[]);
     interface Selected {
       id?: number;
@@ -500,6 +660,53 @@ export default defineComponent({
     function toggleClicked(choice: Selected) {
       choice.clicked = !choice.clicked;
     }
+
+    const getClickedIds = () => {
+      const items = [
+        montagne,
+        mer,
+        compagne,
+        plage,
+        culture,
+        art,
+        nature,
+        sports,
+        gastronomie,
+        aventure,
+        decouverte,
+        detente,
+        croisiere,
+        escapadeMaritime,
+        camping,
+        hiver,
+        printemps,
+        ete,
+        automne,
+        weekEnd,
+        semaine,
+        semaines,
+        populaires,
+        authentique,
+        amerique,
+        europe,
+        asie,
+        antarctique,
+        afrique,
+        oceanie,
+        economique,
+        milieuGamme,
+        luxe,
+        solo,
+        couple,
+        famille,
+        groupe
+      ];
+
+      return items
+        .filter(item => item.value.clicked)
+        .map(item => item.value.id.toString());
+    };
+
     return {
       montagne,
       mer,

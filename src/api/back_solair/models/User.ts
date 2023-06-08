@@ -1,8 +1,8 @@
 interface User {
-    id?:number ,
-    mail?:string,
-    motdepasse?:string
-    psuedo?:string
+    id:number ,
+    mail:string,
+    motdepasse:string
+    psuedo:string
 }
 
 export {User}

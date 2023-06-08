@@ -6,6 +6,7 @@ import HomePageVue from 'src/pages/HomePage.vue';
 import InscriptionPageVue from 'src/pages/InscriptionPage.vue';
 import QuiSommesNousVue from 'src/pages/QuiSommesNous.vue';
 import RecherchePageVue from 'src/pages/RecherchePage.vue';
+import DestinationPageVue from 'src/pages/DestinationPage.vue';
 import { RouteRecordRaw } from 'vue-router';
 
 const routes: RouteRecordRaw[] = [
@@ -43,6 +44,11 @@ const routes: RouteRecordRaw[] = [
     path: '/recherche',
     name: 'Recherche',
     component: RecherchePageVue
+  },
+  {
+    path: '/destination',
+    name: 'Destination',
+    component: DestinationPageVue
   },
   {
     path: '/:catchAll(.*)*',
