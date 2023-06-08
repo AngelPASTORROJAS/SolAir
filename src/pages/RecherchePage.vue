@@ -521,6 +521,11 @@ import FooterComponent from 'src/components/FooterComponent.vue';
 export default defineComponent({
   name: 'ConnexionPage',
   setup() {
+    interface Selected {
+      id?: number,
+      clicked: boolean,
+      prix?: number
+    }
     const montagne = ref({ id: 1, clicked: false });
     const mer = ref({ id: 2, clicked: false });
     const compagne = ref({ id: 3, clicked: false });
@@ -563,7 +568,7 @@ export default defineComponent({
     const budget3 = ref({ prix: 750, clicked: false });
     const budget4 = ref({ prix: 1000, clicked: false });
 
-    function toggleClicked(choice: any) {
+    function toggleClicked(choice: Selected) {
       choice.clicked = !choice.clicked;
     }
     return {
