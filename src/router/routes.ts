@@ -1,6 +1,7 @@
 import ComptePageVue from 'src/pages/ComptePage.vue';
 import ConnexionPageVue from 'src/pages/ConnexionPage.vue';
 import ContactPageVue from 'src/pages/ContactPage.vue';
+import ErrorNotFoundVue from 'src/pages/ErrorNotFound.vue';
 import HomePageVue from 'src/pages/HomePage.vue';
 import InscriptionPageVue from 'src/pages/InscriptionPage.vue';
 import QuiSommesNousVue from 'src/pages/QuiSommesNous.vue';
@@ -40,11 +41,13 @@ const routes: RouteRecordRaw[] = [
   },
   {
     path: '/recherche',
+    name: 'Recherche',
     component: RecherchePageVue
   },
   {
     path: '/:catchAll(.*)*',
-    component: () => import('pages/ErrorNotFound.vue'),
+    name: 'ErrorNotFound',
+    component: ErrorNotFoundVue,
   },
 ];
 
