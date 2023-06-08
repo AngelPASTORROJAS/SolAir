@@ -1,5 +1,5 @@
 <template>
-    <HeaderCustom :label="destination.ville??" />
+    <HeaderCustom :label="destination.ville??''" />
     <div>
         <div>
             <h2>{{ destination.nom }}</h2>
