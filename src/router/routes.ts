@@ -3,22 +3,27 @@ import { RouteRecordRaw } from 'vue-router';
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
+    name:'Home',
     component: () => import('pages/HomePage.vue'),
   },
   {
     path: '/qui-sommes-nous',
+    name: 'QuiSommeNous',
     component: () => import('pages/QuiSommesNous.vue'),
   },
   {
     path: '/contact',
+    name: 'Contact',
     component: () => import('pages/ContactPage.vue')
   },
   {
     path: '/mon-compte',
+    name: 'Compte',
     component: () => import('pages/ComptePage.vue')
   },
   {
     path: '/connexion',
+    name: 'Login',
     component: () => import('pages/ConnexionPage.vue')
   },
   {
