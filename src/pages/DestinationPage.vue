@@ -52,7 +52,8 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 img {
-  width: 35em;
+  width: 38em;
+  border-radius: 20px;
 }
 
 .description {

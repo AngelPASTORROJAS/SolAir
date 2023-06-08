@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, resolveDirective } from 'vue';
+import { defineComponent } from 'vue';
 import NavBar from '../NavBar.vue';
 import { useRouter } from 'vue-router';
 export default defineComponent({
