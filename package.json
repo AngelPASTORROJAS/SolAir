@@ -8,7 +8,8 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
-    "test": "echo \"No test specified\" && exit 0",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "dev": "quasar dev",
     "build": "quasar build",
     "build:app": "quasar build -m electron"
@@ -28,10 +29,12 @@
     "@types/node": "^12.20.21",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
+    "@vitest/coverage-v8": "^0.32.2",
     "eslint": "^8.10.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-vue": "^9.0.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "vitest": "^0.32.2"
   },
   "browserslist": [
     "last 10 Chrome versions",
