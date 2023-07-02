@@ -1,4 +1,4 @@
-import { DestinationRessource } from './ressources/DestinationRessouce';
+import { DestinationRessource } from './ressources/DestinationRessource';
 import { UserRessource } from './ressources/UserRessource';
 
 interface SolairApiType {
