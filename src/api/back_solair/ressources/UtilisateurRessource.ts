@@ -9,9 +9,9 @@ class UtilisateurRessource {
         return response.data as Utilisateur[]
     }
 
-    public async createUtilisateurAsync(utilisateur: Utilisateur): Promise<Utilisateur[]> {
+    public async createUtilisateurAsync(utilisateur: Utilisateur): Promise<boolean> {
       const response = await httpClient.post(`${ressource}`,utilisateur)
-      return response.data as Utilisateur[]
+      return response.data as boolean
   }
 }
 

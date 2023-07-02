@@ -4,26 +4,18 @@
     <h2 class="text-custom-h2 text-h2 text-center">Créer mon compte</h2>
     <q-form @submit="submitForm">
       <div class="input-container">
-        <q-input borderless class="input-style" v-model="username" placeholder="Nom d'utilisateur*" />
+        <q-input borderless class="input-style" v-model="login" placeholder="Nom d'utilisateur*" />
         <q-input borderless class="input-style" v-model="email" placeholder="E-Mail*" />
-        <q-input borderless class="input-style" placeholder="Mot de passe*"
-         v-model="password" :type="isPwd ? 'password' : 'text'">
+        <q-input borderless class="input-style" placeholder="Mot de passe*" v-model="password"
+          :type="isPwd ? 'password' : 'text'">
           <template v-slot:append>
-            <q-icon
-              :name="isPwd ? 'visibility_off' : 'visibility'"
-              class="cursor-pointer"
-              @click="isPwd = !isPwd"
-            />
+            <q-icon :name="isPwd ? 'visibility_off' : 'visibility'" class="cursor-pointer" @click="isPwd = !isPwd" />
           </template>
         </q-input>
-        <q-input borderless class="input-style" placeholder="Confirmer le Mot de passe*"
-         v-model="password2" :type="isPwd2 ? 'password' : 'text'">
+        <q-input borderless class="input-style" placeholder="Confirmer le Mot de passe*" v-model="password2"
+          :type="isPwd2 ? 'password' : 'text'">
           <template v-slot:append>
-            <q-icon
-              :name="isPwd2 ? 'visibility_off' : 'visibility'"
-              class="cursor-pointer"
-              @click="isPwd2 = !isPwd2"
-            />
+            <q-icon :name="isPwd2 ? 'visibility_off' : 'visibility'" class="cursor-pointer" @click="isPwd2 = !isPwd2" />
           </template>
         </q-input>
       </div>
@@ -39,23 +31,58 @@
 import { defineComponent, ref } from 'vue';
 import HeaderCustom from 'src/components/HeaderCustom.vue';
 import FooterComponent from 'src/components/FooterComponent.vue';
+import { Utilisateur } from 'src/api/back_solair/models/Utilisateur';
+import { solairAPI } from 'src/api/back_solair';
+import { useQuasar } from 'quasar';
 
 export default defineComponent({
   name: 'InscriptionPage',
   setup() {
-    const username = ref('')
+    const $q = useQuasar();
+    const utilisateur = {} as Utilisateur
+    const login = ref('')
     const email = ref('')
     const password = ref('')
     const password2 = ref('')
-    const isPwd= ref(true)
-    const isPwd2= ref(true)
+    const isPwd = ref(true)
+    const isPwd2 = ref(true)
 
-    const submitForm = () => {
-      //function of submit
-      return
+    const submitForm = async () => {
+      utilisateur.email = email.value
+      utilisateur.login = login.value
+      utilisateur.mot_de_passe = password.value
+      try {
+        const isCreated = await solairAPI.user.createUtilisateurAsync(utilisateur)
+        if (isCreated == true) {
+          $q.notify({
+            color: 'green-4',
+            textColor: 'white',
+            icon: 'cloud_done',
+            message: 'Créer',
+            position: 'bottom',
+          });
+        } else {
+          $q.notify({
+            color: 'red-5',
+            textColor: 'white',
+            icon: 'warning',
+            message: 'Erreur de Création',
+            position: 'bottom',
+          });
+        }
+      } catch (error) {
+        console.error(error);
+        $q.notify({
+          color: 'red-5',
+          textColor: 'white',
+          icon: 'warning',
+          message: 'Erreur de Création',
+          position: 'bottom',
+        });
+      }
     }
     return {
-      username,
+      login,
       email,
       password,
       password2,
