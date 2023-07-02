@@ -1,7 +1,7 @@
 <template>
   <HeaderCustom label="Connexion" />
   <div class="q-pa-xl">
-    <h2 class="text-custom-h2 text-h3 text-center">Connectez vous</h2>
+    <h2 class="text-custom-h2 text-h2 text-center">Connectez vous</h2>
     <q-form @submit="submitForm">
       <div class="input-container">
         <q-input borderless class="input-style" v-model="username" placeholder="Nom d'utilisateur*" />
@@ -17,8 +17,8 @@
         </q-input>
       </div>
       <div class="row justify-evenly items-baseline">
-        <q-btn type="submit" label="Connexion" class="button-select-custom" />
-        <q-btn to="Inscription" type="submit" label="Créer un compte" color="cyan-7" />
+        <q-btn type="submit" label="Connexion" color="red-4" />
+        <q-btn type="submit" label="Créer un compte" color="cyan-7" to="/inscription" />
       </div>
     </q-form>
   </div>
