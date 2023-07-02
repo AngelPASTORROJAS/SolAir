@@ -546,7 +546,6 @@
 import { defineComponent, ref } from 'vue';
 import HeaderCustom from 'src/components/HeaderCustom.vue';
 import FooterComponent from 'src/components/FooterComponent.vue';
-import { User } from 'src/api/back_solair/models/User';
 import { useRouter } from 'vue-router';
 
 export default defineComponent({
@@ -609,7 +608,6 @@ export default defineComponent({
       };
       router.push(routeDestination);
     };
-    const users = ref([] as User[]);
     interface Selected {
       id?: number;
       clicked: boolean;
@@ -750,7 +748,6 @@ export default defineComponent({
       budget3,
       budget4,
       toggleClicked,
-      users,
       question1,
       question2,
       question3,

@@ -1,13 +1,13 @@
 import { DestinationRessource } from './ressources/DestinationRessource';
-import { UserRessource } from './ressources/UserRessource';
+import { UtilisateurRessource } from './ressources/UtilisateurRessource';
 
 interface SolairApiType {
-  user: UserRessource
+  user: UtilisateurRessource
   destination: DestinationRessource
 }
 
 const solairAPI: SolairApiType = {
-  user: new UserRessource(),
+  user: new UtilisateurRessource(),
   destination: new DestinationRessource()
 };
 export { solairAPI };
