@@ -1,24 +1,24 @@
 <template>
   <HeaderCustom label="Connexion" />
   <div class="q-pa-xl">
-    <h2 class="text-custom-h2 text-h3 q-mb-md">Connectez vous</h2>
+    <h2 class="text-custom-h2 text-h3 text-center">Connectez vous</h2>
     <q-form @submit="submitForm">
-      <q-input v-model="username" placeholder="Nom d'utilisateur*" />
-      <br>
-      <q-input placeholder="Mot de passe*"
-       v-model="password" filled :type="isPwd ? 'password' : 'text'">
-        <template v-slot:append>
-          <q-icon
-            :name="isPwd ? 'visibility_off' : 'visibility'"
-            class="cursor-pointer"
-            @click="isPwd = !isPwd"
-          />
-        </template>
-      </q-input>
-      <br>
-      <div class="">
-        <q-btn class=" q-app" type="submit" label="Connexion" color="red-5" />
-        <q-btn type="submit" label="Inscription" color="red-5" />
+      <div class="input-container">
+        <q-input borderless class="input-style" v-model="username" placeholder="Nom d'utilisateur*" />
+        <q-input borderless class="input-style" placeholder="Mot de passe*"
+         v-model="password" :type="isPwd ? 'password' : 'text'">
+          <template v-slot:append>
+            <q-icon
+              :name="isPwd ? 'visibility_off' : 'visibility'"
+              class="cursor-pointer"
+              @click="isPwd = !isPwd"
+            />
+          </template>
+        </q-input>
+      </div>
+      <div class="row justify-evenly items-baseline">
+        <q-btn type="submit" label="Connexion" class="button-select-custom" />
+        <q-btn to="Inscription" type="submit" label="Créer un compte" color="cyan-7" />
       </div>
     </q-form>
   </div>
@@ -53,4 +53,5 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+</style>
