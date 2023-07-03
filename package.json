@@ -4,7 +4,9 @@
   "description": "A Quasar Project",
   "productName": "Solair App",
   "author": "AngelPASTORROJAS <angeldaniel.pastorrojas@gmail.com>",
+  "homepage": "https://github.com/AngelPASTORROJAS/Solair/blob/main/README.md",
   "private": true,
+  "license": "ISC",
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
     "format": "prettier --write \"**/*.{js,ts,vue,scss,html,md,json}\" --ignore-path .gitignore",
@@ -49,6 +51,10 @@
     "last 10 iOS versions",
     "last 5 Opera versions"
   ],
+  "bugs": {
+    "url": "https://github.com/AngelPASTORROJAS/Solair/issues",
+    "email": "angeldaniel.pastorrojas.etu@gmail.com"
+  },
   "engines": {
     "node": ">= 12.22.1",
     "npm": ">= 6.13.4",
