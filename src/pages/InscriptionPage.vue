@@ -4,9 +4,9 @@
     <h2 class="text-custom-h2 text-h2 text-center">Créer mon compte</h2>
     <q-form @submit="submitForm">
       <div class="input-container">
-        <q-input borderless class="input-style" v-model="login" placeholder="Nom d'utilisateur*" />
-        <q-input borderless class="input-style" v-model="email" placeholder="E-Mail*" />
-        <q-input borderless class="input-style" placeholder="Mot de passe*" v-model="password"
+        <q-input borderless class="input-style" v-model="utilisateur.login" placeholder="Nom d'utilisateur*" />
+        <q-input borderless class="input-style" v-model="utilisateur.email" placeholder="E-Mail*" />
+        <q-input borderless class="input-style" placeholder="Mot de passe*" v-model="utilisateur.mot_de_passe"
           :type="isPwd ? 'password' : 'text'">
           <template v-slot:append>
             <q-icon :name="isPwd ? 'visibility_off' : 'visibility'" class="cursor-pointer" @click="isPwd = !isPwd" />
@@ -39,20 +39,14 @@ export default defineComponent({
   name: 'InscriptionPage',
   setup() {
     const $q = useQuasar();
-    const utilisateur = {} as Utilisateur
-    const login = ref('')
-    const email = ref('')
-    const password = ref('')
+    const utilisateur = ref({} as Utilisateur)
     const password2 = ref('')
     const isPwd = ref(true)
     const isPwd2 = ref(true)
 
     const submitForm = async () => {
-      utilisateur.email = email.value
-      utilisateur.login = login.value
-      utilisateur.mot_de_passe = password.value
       try {
-        const isCreated = await solairAPI.user.createUtilisateurAsync(utilisateur)
+        const isCreated = await solairAPI.user.createUtilisateurAsync(utilisateur.value)
         if (isCreated == true) {
           $q.notify({
             color: 'green-4',
@@ -82,9 +76,7 @@ export default defineComponent({
       }
     }
     return {
-      login,
-      email,
-      password,
+      utilisateur,
       password2,
       isPwd,
       isPwd2,
