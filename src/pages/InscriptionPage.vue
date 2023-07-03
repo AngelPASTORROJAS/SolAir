@@ -43,11 +43,14 @@ import FooterComponent from 'src/components/FooterComponent.vue';
 import { Utilisateur } from 'src/api/back_solair/models/Utilisateur';
 import { solairAPI } from 'src/api/back_solair';
 import { useQuasar } from 'quasar';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   name: 'InscriptionPage',
   setup() {
     const $q = useQuasar();
+    const route = useRouter();
+
     const utilisateur = ref({} as Utilisateur)
     const password2 = ref('')
     const isPwd = ref(true)
@@ -77,6 +80,7 @@ export default defineComponent({
             message: 'Créer',
             position: 'bottom',
           });
+          route.push({name: 'Home'});
         } else {
           $q.notify({
             color: 'red-5',

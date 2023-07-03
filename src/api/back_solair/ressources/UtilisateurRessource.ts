@@ -12,7 +12,13 @@ class UtilisateurRessource {
 
   public async createUtilisateurAsync(utilisateur: Utilisateur): Promise<boolean> {
     const response = await httpClient.post(`${ressource}`, utilisateur);
-    return response.status == httpStatusCode.Created;
+    const token = response.data.token;
+    if (response.status === httpStatusCode.Created && token) {
+      // Stocker le jeton d'authentification dans le LocalStorage
+      LocalStorage.set('jwtToken', token);
+      return true;
+    }
+    return false
   }
 
   public async authentificationUtilisateurAsync(utilisateur: Utilisateur): Promise<boolean> {
