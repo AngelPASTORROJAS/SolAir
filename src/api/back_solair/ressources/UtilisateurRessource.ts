@@ -1,4 +1,4 @@
-import { httpClient } from '../httpClient';
+import { httpClient, httpStatusCode } from '../httpClient';
 import { Utilisateur } from '../models/Utilisateur';
 
 const ressource = 'api/utilisateurs'
@@ -11,7 +11,7 @@ class UtilisateurRessource {
 
     public async createUtilisateurAsync(utilisateur: Utilisateur): Promise<boolean> {
       const response = await httpClient.post(`${ressource}`,utilisateur)
-      return response.data as boolean
+      return response.status == httpStatusCode.Created
   }
 }
 

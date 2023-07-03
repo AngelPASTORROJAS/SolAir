@@ -4,4 +4,6 @@ const httpClient = axios.create({
   baseURL: 'http://localhost:3000/'
 })
 
-export {httpClient}
+const httpStatusCode = axios.HttpStatusCode
+
+export {httpClient, httpStatusCode}
