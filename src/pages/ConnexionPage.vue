@@ -4,15 +4,15 @@
     <h2 class="text-custom-h2 text-h2 text-center">Connectez vous</h2>
     <q-form @submit="submitForm">
       <div class="input-container">
-        <q-input borderless class="input-style" v-model="utilisateur.login" placeholder="Nom d'utilisateur*" />
-        <q-input borderless class="input-style" placeholder="Mot de passe*"
-         v-model="utilisateur.mot_de_passe" :type="isPwd ? 'password' : 'text'">
+        <q-input :maxlength="login_maxlength"
+          :rules="[(val) => !!val || 'Le champ est obligatoire', (val: string) => val.length <= login_maxlength || 'Le login est trop long']"
+          borderless class="input-style" v-model="utilisateur.login" placeholder="Nom d'utilisateur*" />
+        <q-input :maxlength="mot_de_passe_maxlength"
+          :rules="[(val) => !!val || 'Le champ est obligatoire', (val: string) => val.length <= mot_de_passe_maxlength || 'Le mot de passe est trop long']"
+          borderless class="input-style" placeholder="Mot de passe*" v-model="utilisateur.mot_de_passe"
+          :type="isPwd ? 'password' : 'text'">
           <template v-slot:append>
-            <q-icon
-              :name="isPwd ? 'visibility_off' : 'visibility'"
-              class="cursor-pointer"
-              @click="isPwd = !isPwd"
-            />
+            <q-icon :name="isPwd ? 'visibility_off' : 'visibility'" class="cursor-pointer" @click="isPwd = !isPwd" />
           </template>
         </q-input>
       </div>
@@ -37,7 +37,9 @@ export default defineComponent({
   setup() {
     const $q = useQuasar();
     const utilisateur = ref({} as Utilisateur)
-    const isPwd= ref(true)
+    const isPwd = ref(true)
+    const login_maxlength = 50
+    const mot_de_passe_maxlength = 60
 
     const submitForm = async () => {
       try {
@@ -55,7 +57,7 @@ export default defineComponent({
             color: 'red-5',
             textColor: 'white',
             icon: 'warning',
-            message: 'Erreur de Connection',
+            message: 'Connection refusée',
             position: 'bottom',
           });
         }
@@ -65,7 +67,7 @@ export default defineComponent({
           color: 'red-5',
           textColor: 'white',
           icon: 'warning',
-          message: 'Erreur de Connection',
+          message: 'Connection refusée',
           position: 'bottom',
         });
       }
@@ -73,6 +75,8 @@ export default defineComponent({
     return {
       utilisateur,
       isPwd,
+      login_maxlength,
+      mot_de_passe_maxlength,
       submitForm
     }
   },
@@ -82,5 +86,4 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="scss" scoped>
-</style>
+<style lang="scss" scoped></style>
