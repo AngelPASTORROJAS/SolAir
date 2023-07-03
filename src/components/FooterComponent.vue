@@ -5,12 +5,7 @@
     </a>
     <div class="row justify-center navigation">
       <div class="column items-start">
-        <q-btn
-          class="button-disabled"
-          flat
-          color="white"
-          label="contactez-nous"
-        />
+        <p class="header-custom">CONTACTEZ-NOUS</p>
         <q-btn
           no-caps
           flat
@@ -29,19 +24,14 @@
         />
       </div>
       <div class="column items-start">
-        <q-btn class="button-disabled" flat color="white" label="menu" />
+        <p class="header-custom">MENU</p>
         <q-btn to="/" no-caps flat color="white" label="Accueil" />
         <q-btn to="recherche" no-caps flat color="white" label="Gestionnaires d'expérience" />
         <q-btn to="qui-sommes-nous" no-caps flat color="white" label="Qui sommes-nous ?" />
         <q-btn to="contact" no-caps flat color="white" label="Contact" />
       </div>
       <div class="column items-start">
-        <q-btn
-          class="button-disabled"
-          flat
-          color="white"
-          label="Suivez-nous :"
-        />
+        <p class="header-custom">SUIVEZ-NOUS</p>
         <q-btn
           no-caps
           flat
@@ -59,7 +49,7 @@
           label="Facebook"
           href="https://www.facebook.com"
         />
-        <q-btn 
+        <q-btn
           no-caps
           flat
           color="white"
