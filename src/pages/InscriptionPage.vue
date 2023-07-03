@@ -4,13 +4,13 @@
     <h2 class="text-custom-h2 text-h2 text-center">Créer mon compte</h2>
     <q-form @submit="submitForm">
       <div class="input-container">
-        <q-input :maxlength="login_maxlength"
+        <q-input counter :maxlength="login_maxlength"
           :rules="[(val) => !!val || 'Le champ est obligatoire', (val: string) => val.length <= login_maxlength || 'Le login est trop long']"
           borderless class="input-style" v-model="utilisateur.login" placeholder="Nom d'utilisateur*" />
-        <q-input :maxlength="email_maxlength"
+        <q-input counter :maxlength="email_maxlength"
           :rules="[(val) => !!val || 'Le champ est obligatoire', (val: string) => /^[\w-.]+@([\w-]+\.)+[\w-]{2,4}$/.test(val) || 'Adresse e-mail invalide', (val: string) => val.length <= email_maxlength || 'Adresse e-mail est trop long']"
           borderless class="input-style" v-model="utilisateur.email" placeholder="E-Mail*" />
-        <q-input :maxlength="mot_de_passe_maxlength"
+        <q-input counter :maxlength="mot_de_passe_maxlength"
           :rules="[(val) => !!val || 'Le champ est obligatoire', (val: string) => val.length <= mot_de_passe_maxlength || 'Le mot de passe est trop long']"
           borderless class="input-style" placeholder="Mot de passe*" v-model="utilisateur.mot_de_passe"
           :type="isPwd ? 'password' : 'text'">
@@ -18,7 +18,7 @@
             <q-icon :name="isPwd ? 'visibility_off' : 'visibility'" class="cursor-pointer" @click="isPwd = !isPwd" />
           </template>
         </q-input>
-        <q-input :maxlength="mot_de_passe_maxlength"
+        <q-input counter :maxlength="mot_de_passe_maxlength"
           :rules="[(val) => !!val || 'Le champ est obligatoire', (val: string) => val.length <= mot_de_passe_maxlength || 'Le mot de passe est trop long', (val) => val == utilisateur.mot_de_passe || 'Le mot de passe doivent être idententique']"
           borderless class="input-style" placeholder="Confirmer le Mot de passe*" v-model="password2"
           :type="isPwd2 ? 'password' : 'text'">
