@@ -1,5 +1,6 @@
 import { httpClient, httpStatusCode } from '../httpClient';
 import { Utilisateur } from '../models/Utilisateur';
+import { LocalStorage } from 'quasar';
 
 const ressource = 'api/utilisateurs';
 
@@ -16,7 +17,13 @@ class UtilisateurRessource {
 
   public async authentificationUtilisateurAsync(utilisateur: Utilisateur): Promise<boolean> {
     const response = await httpClient.post(`${ressource}/authenticate`, utilisateur);
-    return response.status == httpStatusCode.NoContent;
+    const token = response.data.token;
+    if (response.status === httpStatusCode.Ok && token) {
+      // Stocker le jeton d'authentification dans le LocalStorage
+      LocalStorage.set('jwtToken', token);
+      return true;
+    }
+    return false
   }
 }
 
