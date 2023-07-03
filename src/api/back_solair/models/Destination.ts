@@ -1,9 +1,10 @@
 interface Destination {
     id?:number ,
     nom?:string,
-    urlimage?:string,
+    url_image?:string,
     description?:string,
-    ville?:string
+    titre?:string,
+    article?:string
 }
 
 export {Destination}

@@ -11,7 +11,7 @@ describe('Destination interface', () => {
     const destination: Destination = {
       id: 1,
       nom: 'Paris',
-      ville: 'France',
+      titre: 'France',
     };
     expect(destination).toBeDefined();
   });
