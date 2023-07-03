@@ -4,9 +4,9 @@
     <h2 class="text-custom-h2 text-h2 text-center">Connectez vous</h2>
     <q-form @submit="submitForm">
       <div class="input-container">
-        <q-input borderless class="input-style" v-model="username" placeholder="Nom d'utilisateur*" />
+        <q-input borderless class="input-style" v-model="utilisateur.login" placeholder="Nom d'utilisateur*" />
         <q-input borderless class="input-style" placeholder="Mot de passe*"
-         v-model="password" :type="isPwd ? 'password' : 'text'">
+         v-model="utilisateur.mot_de_passe" :type="isPwd ? 'password' : 'text'">
           <template v-slot:append>
             <q-icon
               :name="isPwd ? 'visibility_off' : 'visibility'"
@@ -28,21 +28,50 @@
 import { defineComponent, ref } from 'vue';
 import HeaderCustom from 'src/components/HeaderCustom.vue';
 import FooterComponent from 'src/components/FooterComponent.vue';
+import { Utilisateur } from 'src/api/back_solair/models/Utilisateur';
+import { solairAPI } from 'src/api/back_solair';
+import { useQuasar } from 'quasar';
 
 export default defineComponent({
   name: 'ConnexionPage',
   setup() {
-    const username = ref('')
-    const password = ref('')
+    const $q = useQuasar();
+    const utilisateur = ref({} as Utilisateur)
     const isPwd= ref(true)
 
-    const submitForm = () => {
-      //function of submit
-      return
+    const submitForm = async () => {
+      try {
+        const isAuthentificate = await solairAPI.user.authentificationUtilisateurAsync(utilisateur.value)
+        if (isAuthentificate == true) {
+          $q.notify({
+            color: 'green-4',
+            textColor: 'white',
+            icon: 'cloud_done',
+            message: 'Connection réussi',
+            position: 'bottom',
+          });
+        } else {
+          $q.notify({
+            color: 'red-5',
+            textColor: 'white',
+            icon: 'warning',
+            message: 'Erreur de Connection',
+            position: 'bottom',
+          });
+        }
+      } catch (error) {
+        console.error(error);
+        $q.notify({
+          color: 'red-5',
+          textColor: 'white',
+          icon: 'warning',
+          message: 'Erreur de Connection',
+          position: 'bottom',
+        });
+      }
     }
     return {
-      username,
-      password,
+      utilisateur,
       isPwd,
       submitForm
     }
