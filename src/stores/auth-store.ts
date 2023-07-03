@@ -55,6 +55,15 @@ export const useAuthStore = defineStore('auth', {
     async IsConnect(){
       const utilisateur = await this.getUtilisateurFromToken();
       return utilisateur == null;
+    },
+
+    async logout() {
+      this._utilisateur = null;
+      this._roles = null;
+      this._token = null;
+      LocalStorage.remove('utilisateur');
+      LocalStorage.remove('roles');
+      LocalStorage.remove('jwtToken');
     }
   },
 });
