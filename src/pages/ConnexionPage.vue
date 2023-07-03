@@ -31,11 +31,14 @@ import FooterComponent from 'src/components/FooterComponent.vue';
 import { Utilisateur } from 'src/api/back_solair/models/Utilisateur';
 import { solairAPI } from 'src/api/back_solair';
 import { useQuasar } from 'quasar';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   name: 'ConnexionPage',
   setup() {
     const $q = useQuasar();
+    const route = useRouter();
+
     const utilisateur = ref({} as Utilisateur)
     const isPwd = ref(true)
     const login_maxlength = 50
@@ -52,6 +55,7 @@ export default defineComponent({
             message: 'Connection réussi',
             position: 'bottom',
           });
+          route.push({name: 'Home'});
         } else {
           $q.notify({
             color: 'red-5',
