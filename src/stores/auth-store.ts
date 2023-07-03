@@ -54,10 +54,14 @@ export const useAuthStore = defineStore('auth', {
 
     async IsConnect(){
       const utilisateur = await this.getUtilisateurFromToken();
-      return utilisateur == null;
+      if(!utilisateur){
+        return false
+      }
+      const utilisateur_type = {} as Utilisateur
+      return typeof utilisateur == typeof utilisateur_type;
     },
 
-    async logout() {
+    logout() {
       this._utilisateur = null;
       this._roles = null;
       this._token = null;
