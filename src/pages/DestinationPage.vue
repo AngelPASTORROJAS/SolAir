@@ -1,11 +1,11 @@
 <template>
-  <HeaderCustom :label="destination.ville ?? ''" />
+  <HeaderCustom :label="destination.nom ?? ''" />
   <div class="row justify-center items-start q-py-md q-px-xl q-gutter-lg">
-    <div class="column justify-evenly description">
-      <h2 class="text-custom-h2 text-center">{{ destination.nom }}</h2>
-      <p class="text-custom-p text-center">{{ destination.description }}</p>
+    <div class="column justify-evenly article">
+      <h2 class="text-custom-h2 text-center">{{ destination.titre }}</h2>
+      <p class="text-custom-p text-center">{{ destination.article }}</p>
     </div>
-    <img class="q-ma-xl" :src="destination.urlimage" />
+    <img class="q-ma-xl" :src="destination.url_image" :alt="destination.description"/>
   </div>
   <FooterComponent />
 </template>
@@ -28,9 +28,7 @@ export default defineComponent({
     onMounted(async () => {
       try {
         $q.loading.show();
-        destination.value = (
-          await solairAPI.destination.getDestinationsRandomAsync()
-        )[0];
+        destination.value = await solairAPI.destination.getDestinationsRandomAsync();
         // getClicked.value = route.params.body;
         // console.log(getClicked.value);
         // console.log(typeof(getClicked.value));
@@ -56,7 +54,7 @@ img {
   border-radius: 20px;
 }
 
-.description {
+.article {
   width: 30em;
 }
 

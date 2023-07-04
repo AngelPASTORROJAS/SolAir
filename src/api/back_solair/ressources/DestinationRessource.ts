@@ -9,9 +9,9 @@ class DestinationRessource {
     return response.data as Destination[];
   }
 
-  public async getDestinationsRandomAsync(): Promise<Destination[]> {
+  public async getDestinationsRandomAsync(): Promise<Destination> {
     const response = await httpClient.get(`${ressource}/random`);
-    return response.data as Destination[];
+    return response.data as Destination;
   }
 }
 
