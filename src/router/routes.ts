@@ -58,7 +58,7 @@ const routes: RouteRecordRaw[] = [
     component: ErrorForbiddenVue
   },
   {
-    path: '/unauthaurized',
+    path: '/unauthorized',
     name: 'ErrorUnautorized',
     component: ErrorUnauthorizedVue
   },
