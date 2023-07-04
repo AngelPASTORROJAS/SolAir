@@ -16,24 +16,25 @@ import FooterComponent from 'src/components/FooterComponent.vue';
 import { useQuasar } from 'quasar';
 import { Destination } from 'src/api/back_solair/models/Destination';
 import { solairAPI } from 'src/api/back_solair';
-// import { useRoute } from 'vue-router';
+import { useRouter } from 'vue-router';
 
 export default defineComponent({
   name: 'DestinationPage',
   setup() {
     const $q = useQuasar();
     const destination = ref({} as Destination);
-    //   const route = useRoute();
-    //   const getClicked = ref()
+      const router = useRouter();
     onMounted(async () => {
       try {
         $q.loading.show();
         destination.value = await solairAPI.destination.getDestinationsRandomAsync();
-        // getClicked.value = route.params.body;
-        // console.log(getClicked.value);
-        // console.log(typeof(getClicked.value));
-      } catch (e) {
-        console.log(e);
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      } catch (error:any) {
+        if(error.response && error.response.status === 401){
+          router.push({name:'ErrorUnautorized'})
+        }
+        console.error(error);
+
       } finally {
         $q.loading.hide();
       }
