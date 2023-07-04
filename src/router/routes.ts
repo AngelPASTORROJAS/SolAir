@@ -8,6 +8,8 @@ import QuiSommesNousVue from 'src/pages/QuiSommesNous.vue';
 import RecherchePageVue from 'src/pages/RecherchePage.vue';
 import DestinationPageVue from 'src/pages/DestinationPage.vue';
 import { RouteRecordRaw } from 'vue-router';
+import ErrorUnauthorizedVue from 'src/pages/ErrorUnauthhorized.vue';
+import ErrorForbiddenVue from 'src/pages/ErrorForbidden.vue';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -49,6 +51,16 @@ const routes: RouteRecordRaw[] = [
     path: '/destination',
     name: 'Destination',
     component: DestinationPageVue
+  },
+  {
+    path: '/forbidden',
+    name: 'ErrorForbidden',
+    component: ErrorForbiddenVue
+  },
+  {
+    path: '/unauthaurized',
+    name: 'ErrorUnautorized',
+    component: ErrorUnauthorizedVue
   },
   {
     path: '/:catchAll(.*)*',
