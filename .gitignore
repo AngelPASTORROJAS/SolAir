@@ -27,4 +27,6 @@ config/
 build/
 dist/
 
-
+#Ignore les fichiers test
+test_exemple/
+.env
